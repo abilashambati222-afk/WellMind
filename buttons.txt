@@ -1,0 +1,103 @@
+20: <button id="request-permissions-btn" class="btn btn-outline btn-small" style="margin-right: 8px;">Allow Permissions</button>
+22: <a href="#/signup" class="btn btn-primary btn-small">Free forever</a>
+134: const permissionButton = document.getElementById('request-permissions-btn');
+135: if (permissionButton) {
+136: permissionButton.addEventListener('click', requestPermissions);
+149: <a href="#/stress" class="pill-btn"><span class="pill-icon">😌</span> Stress less</a>
+150: <a href="#/sleep" class="pill-btn"><span class="pill-icon">💤</span> Sleep soundly</a>
+151: <a href="#/anxiety" class="pill-btn"><span class="pill-icon">🌱</span> Manage anxiety</a>
+152: <a href="#/articles" class="pill-btn"><span class="pill-icon">🧠</span> Process thoughts</a>
+153: <a href="#/meditation" class="pill-btn"><span class="pill-icon">🧘</span> Practice meditation</a>
+171: <button class="mood-btn" style="flex: 1; padding: 24px 16px; background: white; border: 2px solid transparent; border-radius: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+174: </button>
+175: <button class="mood-btn" style="flex: 1; padding: 24px 16px; background: white; border: 2px solid transparent; border-radius: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+178: </button>
+179: <button class="mood-btn" style="flex: 1; padding: 24px 16px; background: white; border: 2px solid var(--color-primary); border-radius: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-md); transform: scale(1.05);" onmouseover="this.style.transform='scale(1.05) translateY(-4px)';" onmouseout="this.style.transform='scale(1.05) translateY(0)';">
+182: </button>
+183: <button class="mood-btn" style="flex: 1; padding: 24px 16px; background: white; border: 2px solid transparent; border-radius: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+186: </button>
+187: <button class="mood-btn" style="flex: 1; padding: 24px 16px; background: white; border: 2px solid transparent; border-radius: 20px; cursor: pointer; transition: all 0.2s ease; box-shadow: var(--shadow-sm);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)';">
+190: </button>
+205: <button class="btn btn-primary" onclick="window.location.hash='#/assessment'" style="white-space: nowrap;">Start Check-in</button>
+248: <a href="#/meditation" class="btn btn-outline">View all categories</a>
+259: <button class="btn btn-primary">Request a demo</button>
+260: <button class="btn btn-white">Learn more</button>
+521: <button type="submit" class="btn btn-primary" style="width: 100%;">${title}</button>
+556: <a href="#/stress" class="btn btn-primary">Start Stress Journey</a>
+557: <a href="#/assessment" class="btn btn-outline">Take a quick check-in</a>
+599: <button id="stress-tool-clear" class="btn btn-outline">Clear selection</button>
+600: <button id="stress-tool-save" class="btn btn-primary">Save progress</button>
+601: <button id="stress-tool-email" class="btn btn-secondary">Email this plan</button>
+608: <button id="stress-tool-reset-all" class="btn btn-outline" style="margin-top: 12px;">Reset all tool progress</button>
+610: <div class="text-center" style="margin-top: 30px;">        <a href="#/new-popular" class="btn btn-outline">Explore everything</a>
+624: <p style="color: var(--color-text-muted);">Use the mood buttons on the home page to record how you’re feeling in under 30 seconds.</p>
+685: <a href="#positions" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.2rem;">View Open Roles</a>
+781: <button class="btn btn-outline" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 8px;">Download PDF</button>
+786: <button class="btn btn-outline" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 8px;">Download ZIP</button>
+804: <button class="btn btn-primary" style="padding: 16px 32px; font-size: 1.2rem;">Match with a Therapist</button>
+841: <button class="btn btn-outline" style="width: 100%; border-radius: 8px;">View Profile</button>
+850: <button class="btn btn-outline" style="width: 100%; border-radius: 8px;">View Profile</button>
+917: <button class="btn btn-primary" style="padding: 16px 32px; font-size: 1.2rem;">Start with a Coach</button>
+978: <button id="ebb-chat-send" class="btn btn-primary" style="border-radius: 24px; padding: 0 24px;">Send</button>
+1000: <button class="btn" style="background: var(--color-tertiary); color: #0F0F24; padding: 14px 32px;">Start Day 1</button>
+1068: <a href="#/assessment" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem;">Start Assessment</a>
+1114: <button class="btn btn-outline">Explore Series</button>
+1125: <button class="btn btn-outline">Explore Series</button>
+1210: <a href="#/meditation" class="btn btn-primary" style="padding: 12px 24px; text-decoration: none; display: inline-block;">Continue Course</a>
+1220: <a href="#/calming-anxiety" class="btn btn-outline" style="align-self: flex-start; padding: 8px 16px; font-size: 0.9rem; text-decoration: none;">Start Course</a>
+1226: <a href="#/stress" class="btn btn-outline" style="align-self: flex-start; padding: 8px 16px; font-size: 0.9rem; text-decoration: none;">Start Course</a>
+1256: <button class="btn btn-primary" style="padding: 10px 20px;">Start</button>
+1265: <button class="btn" style="background: #F8F9FA; color: #ccc; padding: 10px 20px; cursor: not-allowed;" disabled>Locked</button>
+1274: <button class="btn" style="background: #F8F9FA; color: #ccc; padding: 10px 20px; cursor: not-allowed;" disabled>Locked</button>
+1298: <button class="btn" style="background: white; color: #111; border: none; padding: 12px 24px;">Start 3 Min Practice</button>
+1374: <a href="#/guided-courses" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Start Course</a>
+1383: <a href="#/calming-anxiety" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Try Now</a>
+1392: <a href="#/articles" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Read Article</a>
+1415: <button id="play-exercise-btn" class="btn" style="background: white; color: #1A3A2A; padding: 16px 40px; font-size: 1.2rem; border-radius: 30px;">Play Exercise</button>
+1425: <button id="close-exercise-btn" class="btn btn-outline" style="margin-top: 16px;">Close Exercise</button>
+1468: <button id="sleep-play-toggle" style="width: 64px; height: 64px; border-radius: 50%; background: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #1A1A3A; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">▶</button>
+1486: <div class="control-buttons" style="display: flex; align-items: center; gap: 24px;">
+1487: <button id="sleep-previous-track" style="background:none; border:none; color: white; font-size: 28px; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">⏮</button>
+1488: <button id="sleep-play-button" style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.4);">▶</button>
+1489: <button id="sleep-next-track" style="background:none; border:none; color: white; font-size: 28px; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">⏭</button>
+1538: <button id="wind-noise-play" class="btn btn-outline" style="width: 100%; border-radius: 30px;">Play</button>
+1546: <button id="rain-noise-play" class="btn btn-primary" style="width: 100%; border-radius: 30px; background: #87CEFA; color: #20456A; border: none;">Play</button>
+1554: <button id="brown-noise-play" class="btn btn-outline" style="width: 100%; border-radius: 30px;">Play</button>
+1611: <button id="prev-question-btn" class="btn btn-outline" style="opacity: 0.5; cursor: not-allowed;" disabled>Previous</button>
+1612: <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+1672: <button id="prev-question-btn" class="btn btn-outline">Previous</button>
+1673: <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+1691: const prevButton = document.getElementById('prev-question-btn');
+1692: const nextButton = document.getElementById('next-question-btn');
+1694: prevButton.disabled = assessmentState.index === 0;
+1695: prevButton.style.opacity = assessmentState.index === 0 ? '0.5' : '1';
+1696: prevButton.style.cursor = assessmentState.index === 0 ? 'not-allowed' : 'pointer';
+1700: nextButton.disabled = true;
+1701: nextButton.style.opacity = '0.5';
+1702: nextButton.style.cursor = 'not-allowed';
+1707: nextButton.disabled = false;
+1708: nextButton.style.opacity = '1';
+1709: nextButton.style.cursor = 'pointer';
+1714: prevButton.onclick = () => {
+1721: nextButton.onclick = () => {
+1779: <button class="btn btn-primary" style="margin-top: 24px;" onclick="window.location.hash='#/'">Back to Home</button>
+2102: updateNoiseButtons();
+2105: function updateNoiseButtons() {
+2107: const button = document.getElementById(`${type}-noise-play`);
+2108: if (button) {
+2109: button.textContent = currentNoiseType === type ? 'Pause' : 'Play';
+2137: updateNoiseButtons();
+2173: updateNoiseButtons();
+2215: const playButton = document.getElementById('sleep-play-button');
+2227: if (playButton) playButton.textContent = sleepAudioPlayer ? '❚❚' : '▶';
+2278: const playButton = document.getElementById('sleep-play-button');
+2280: const nextButton = document.getElementById('sleep-next-track');
+2281: const prevButton = document.getElementById('sleep-previous-track');
+2285: if (playButton) {
+2286: playButton.onclick = toggleSleepPlayback;
+2291: if (nextButton) {
+2292: nextButton.onclick = () => {
+2297: if (prevButton) {
+2298: prevButton.onclick = () => {
+2814: <button id="daily-reset-start" class="btn btn-primary" style="margin-right:8px;">Start Reset</button>
+2815: <button id="daily-reset-stop" class="btn btn-outline" disabled>Stop</button>

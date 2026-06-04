@@ -1,0 +1,2305 @@
+1763: const MindfulParenting = `
+1764:   <section class="page-hero" style="background-color: #FCE4EC; padding: 100px 0;">
+1765:     <div class="container text-center">
+1766:       <h1 class="hero-title" style="margin-bottom: 24px; font-size: 4rem;">Mindful Parenting</h1>
+1767:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px; font-size: 1.25rem;">Nurture your family with patience, presence, and deeper connection throughout every stage of parenting.</p>
+1768:     </div>
+1769:   </section>
+1770:   <section style="padding: 100px 0; background: white;">
+1771:     <div class="container" style="max-width: 1000px;">
+1772:       
+1773:       <div style="background: #F8F9FA; border-radius: 32px; padding: 48px; margin-bottom: 80px; text-align: center;">
+1774:         <h2 style="font-size: 2.5rem; margin-bottom: 24px;">The Parenting Journey</h2>
+1775:         <p style="color: var(--color-text-muted); font-size: 1.125rem; max-width: 700px; margin: 0 auto 40px;">Parenting is full of joy, chaos, and overwhelming moments. Our mindful parenting resources help you stay grounded so you can show up as the parent you want to be.</p>
+1776:         
+1777:         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
+1778:           <div style="background: white; padding: 32px; border-radius: 24px; border: 1px solid #EAEAEA; box-shadow: var(--shadow-sm); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1779:             <div style="font-size: 3rem; margin-bottom: 16px;">🧘‍♀️</div>
+1780:             <h3 style="font-size: 1.4rem; margin-bottom: 12px;">For Parents</h3>
+1781:             <p style="color: var(--color-text-muted);">Self-care meditations, stress-relief practices, and techniques to manage frustration.</p>
+1782:           </div>
+1783:           <div style="background: white; padding: 32px; border-radius: 24px; border: 1px solid #EAEAEA; box-shadow: var(--shadow-sm); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1784:             <div style="font-size: 3rem; margin-bottom: 16px;">👶🏽</div>
+1785:             <h3 style="font-size: 1.4rem; margin-bottom: 12px;">For Kids</h3>
+1786:             <p style="color: var(--color-text-muted);">Engaging mindfulness exercises, breathing games, and focus tools for young minds.</p>
+1787:           </div>
+1788:           <div style="background: white; padding: 32px; border-radius: 24px; border: 1px solid #EAEAEA; box-shadow: var(--shadow-sm); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1789:             <div style="font-size: 3rem; margin-bottom: 16px;">👨‍👩‍👧‍👦</div>
+1790:             <h3 style="font-size: 1.4rem; margin-bottom: 12px;">Together</h3>
+1791:             <p style="color: var(--color-text-muted);">Shared activities to foster open communication and build stronger family bonds.</p>
+1792:           </div>
+1793:         </div>
+1794:       </div>
+1795:       
+1796:       <h2 style="font-size: 2.5rem; margin-bottom: 32px; text-align: center;">Popular Resources</h2>
+1797:       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 80px;">
+1798:         <div style="border: 1px solid #EAEAEA; border-radius: 24px; overflow: hidden; background: white; transition: box-shadow 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+1799:           <div style="height: 160px; background: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+1800:           <div style="padding: 32px;">
+1801:              <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Course</span>
+1802:              <h3 style="font-size: 1.5rem; margin: 12px 0;">Patience in the Chaos</h3>
+1803:              <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px;">A 7-day course on finding calm during tantrums and chaotic mornings.</p>
+1804:              <a href="#/guided-courses" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Start Course</a>
+1805:           </div>
+1806:         </div>
+1807:         <div style="border: 1px solid #EAEAEA; border-radius: 24px; overflow: hidden; background: white; transition: box-shadow 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+1808:           <div style="height: 160px; background: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+1809:           <div style="padding: 32px;">
+1810:              <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Exercise</span>
+1811:              <h3 style="font-size: 1.5rem; margin: 12px 0;">The 3-Breath Pause</h3>
+1812:              <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px;">A simple technique to reset your nervous system before reacting to your child.</p>
+1813:              <a href="#/calming-anxiety" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Try Now</a>
+1814:           </div>
+1815:         </div>
+1816:         <div style="border: 1px solid #EAEAEA; border-radius: 24px; overflow: hidden; background: white; transition: box-shadow 0.3s, transform 0.3s; cursor: pointer;" onmouseover="this.style.boxShadow='var(--shadow-md)'; this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)'">
+1817:            <div style="height: 160px; background: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover;"></div>
+1818:           <div style="padding: 32px;">
+1819:              <span style="color: var(--color-primary); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">Article</span>
+1820:              <h3 style="font-size: 1.5rem; margin: 12px 0;">Navigating Teen Years</h3>
+1821:              <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px;">How to transition from manager to consultant as your children grow.</p>
+1822:              <a href="#/articles" class="btn btn-outline" style="display: block; width: 100%; text-align: center; border-radius: 8px; box-sizing: border-box; text-decoration: none;">Read Article</a>
+1823:           </div>
+1824:         </div>
+1825:       </div>
+1826:       
+1827:     </div>
+1828:   </section>
+1829: `;
+1830: 
+1831: const MindfulnessWork = `
+1832:   <section class="page-hero" style="background-color: #E6F7F0; padding: 100px 0;">
+1833:     <div class="container text-center">
+1834:       <h1 class="hero-title" style="margin-bottom: 24px; font-size: 4rem;">Mindfulness at Work</h1>
+1835:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px; font-size: 1.25rem;">Cultivate focus, resilience, and better communication in your professional environment.</p>
+1836:     </div>
+1837:   </section>
+1838:   <section style="padding: 100px 0; background: white;">
+1839:     <div class="container" style="max-width: 1000px;">
+1840:       
+1841:       <div style="background: linear-gradient(135deg, #1A3A2A, #2D5E4D); border-radius: 32px; padding: 64px; color: white; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 80px;">
+1842:         <span style="background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">Daily Recommendation</span>
+1843:         <h2 style="font-size: 3rem; margin: 0 0 16px;">The 3-Minute Desk Reset</h2>
+1844:         <p style="font-size: 1.25rem; color: #A0C0B0; margin-bottom: 32px; max-width: 600px;">Step away from the screen, drop your shoulders, and recalibrate your focus before your next task.</p>
+1845:         <button id="play-exercise-btn" class="btn" style="background: white; color: #1A3A2A; padding: 16px 40px; font-size: 1.2rem; border-radius: 30px;">Play Exercise</button>
+1846:         <div id="exercise-panel" style="display:none; margin-top: 32px; background: rgba(255,255,255,0.9); border-radius: 24px; padding: 28px; text-align:left; box-shadow: var(--shadow-md);">
+1847:           <h3 style="margin-top:0; font-size: 1.75rem;">Desk Reset Exercise</h3>
+1848:           <p style="color: var(--color-text-muted); font-size: 1rem; margin-bottom: 24px;">Follow these movement and breathing steps to reset your body and mind in three minutes.</p>
+1849:           <ol style="padding-left: 20px; color: var(--color-text-dark);">
+1850:             <li style="margin-bottom: 12px;">Stand up and stretch your arms overhead. Inhale deeply for 4 seconds.</li>
+1851:             <li style="margin-bottom: 12px;">Exhale slowly while rolling your shoulders back and down.</li>
+1852:             <li style="margin-bottom: 12px;">Do 3 slow neck circles to release tension.</li>
+1853:             <li style="margin-bottom: 12px;">Finish with 5 grounding breaths: inhale for 4, hold for 2, exhale for 6.</li>
+1854:           </ol>
+1855:           <button id="close-exercise-btn" class="btn btn-outline" style="margin-top: 16px;">Close Exercise</button>
+1856:         </div>
+1857:       </div>
+1858:         <div style="border: 1px solid #EAEAEA; border-radius: 20px; overflow: hidden; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1859:           <div style="height: 140px; background: #E6F7F0; display: flex; align-items: center; justify-content: center; font-size: 3rem;">💼</div>
+1860:           <div style="padding: 24px;">
+1861:             <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Pre-Meeting Prep</h3>
+1862:             <p style="color: var(--color-text-muted); font-size: 0.95rem;">Clear your head and set an intention before stepping into that big presentation or tough conversation.</p>
+1863:           </div>
+1864:         </div>
+1865:         <div style="border: 1px solid #EAEAEA; border-radius: 20px; overflow: hidden; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1866:           <div style="height: 140px; background: #FFF3E0; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔋</div>
+1867:           <div style="padding: 24px;">
+1868:             <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Mid-day Slump</h3>
+1869:             <p style="color: var(--color-text-muted); font-size: 0.95rem;">A revitalizing breathing technique to boost your energy naturally at 3 PM.</p>
+1870:           </div>
+1871:         </div>
+1872:         <div style="border: 1px solid #EAEAEA; border-radius: 20px; overflow: hidden; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+1873:           <div style="height: 140px; background: #E8F5E9; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚇</div>
+1874:           <div style="padding: 24px;">
+1875:             <h3 style="font-size: 1.2rem; margin-bottom: 8px;">The Commute Home</h3>
+1876:             <p style="color: var(--color-text-muted); font-size: 0.95rem;">Leave work stress at work. Use your transit time to transition back into personal time.</p>
+1877:           </div>
+1878:         </div>
+1879:       </div>
+1880:       
+1881:     </div>
+1882:   </section>
+1883: `;
+1884: 
+1885: const SleepMusic = `
+1886:   <section class="page-hero" style="background-color: #1A1A3A; color: white; padding: 80px 0;">
+1887:     <div class="container text-center">
+1888:       <h1 class="hero-title" style="margin-bottom: 20px; color: white;">Sleep Music</h1>
+1889:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px; color: #A0A0C0;">Drift off to peaceful sounds, ambient textures, and calm sleepscapes.</p>
+1890:     </div>
+1891:   </section>
+1892:   <section class="library-section" style="background-color: #0F0F24; padding: 60px 0;">
+1893:     <div class="container">
+1894:       <!-- Sleep music player -->
+1895:       <div class="featured-player" style="background: linear-gradient(145deg, #2D2D5E, #1A1A3A); border-radius: 24px; padding: 40px; color: white; display: flex; gap: 40px; align-items: center; margin-bottom: 60px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+1896:         <div class="player-cover" style="width: 250px; height: 250px; border-radius: 20px; background: url('https://images.unsplash.com/photo-1534067339794-fbac860c4013?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80') center/cover; box-shadow: 0 10px 30px rgba(0,0,0,0.5); flex-shrink: 0; position: relative;">
+1897:           <div class="play-overlay" style="position: absolute; inset:0; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.2); border-radius: 20px;">
+1898:              <button id="sleep-play-toggle" style="width: 64px; height: 64px; border-radius: 50%; background: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #1A1A3A; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">▶</button>
+1899:           </div>
+1900:         </div>
+1901:         <div class="player-controls" style="flex: 1;">
+1902:           <span style="background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Featured Track</span>
+1903:           <h2 id="sleep-track-title" style="font-size: 2.5rem; margin: 16px 0 8px;">Deep Melody Tunes</h2>
+1904:           <p id="sleep-track-desc" style="color: #A0A0C0; font-size: 1.1rem; margin-bottom: 32px;">Harmonic frequencies and slow, deep cello melodies to guide you into profound sleep.</p>
+1905:           
+1906:           <div class="progress-container" style="margin-bottom: 24px;">
+1907:             <div class="time-readout" style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #A0A0C0; margin-bottom: 8px;">
+1908:               <span id="sleep-current-time">0:00</span>
+1909:               <span id="sleep-total-time">8:00:00</span>
+1910:             </div>
+1911:             <div id="sleep-progress-bar" class="progress-bar" style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; cursor: pointer;">
+1912:               <div id="sleep-progress-fill" class="progress-fill" style="width: 0%; height: 100%; background: var(--color-primary); border-radius: 3px; box-shadow: 0 0 10px var(--color-primary);"></div>
+1913:             </div>
+1914:           </div>
+1915:           
+1916:           <div class="control-buttons" style="display: flex; align-items: center; gap: 24px;">
+1917:             <button id="sleep-previous-track" style="background:none; border:none; color: white; font-size: 28px; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">⏮</button>
+1918:             <button id="sleep-play-button" style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; box-shadow: 0 4px 12px rgba(52, 168, 83, 0.4);">▶</button>
+1919:             <button id="sleep-next-track" style="background:none; border:none; color: white; font-size: 28px; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">⏭</button>
+1920:             <label style="display: flex; align-items: center; gap: 8px; color: #A0A0C0; font-size: 0.9rem;">
+1921:               <span>Vol</span>
+1922:               <input id="sleep-volume" type="range" min="0" max="100" value="50" style="cursor: pointer;">
+1923:             </label>
+1924:           </div>
+1925:         </div>
+1926:       </div>
+1927: 
+1928:       <h2 class="section-title" style="color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px;">More Sleep Music</h2>
+1929:       <div class="library-grid" style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, minmax(240px, 1fr)); gap: 24px;">
+1930:         <div class="sleep-library-card" data-track-index="0" style="background-color: #2D2D5E; color: white; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 28px; cursor: pointer; transition: transform 0.3s, background 0.3s;">
+1931:           <div class="card-content"><h3 style="margin-bottom: 12px;">Ambient Dreams</h3><p style="color:#A0A0C0; margin-bottom: 20px;">Atmospheric synth pads and soft chimes.</p></div>
+1932:           <div class="card-illustration" style="font-size: 2rem;">🌙</div>
+1933:         </div>
+1934:         <div class="sleep-library-card" data-track-index="1" style="background-color: #2D2D5E; color: white; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 28px; cursor: pointer; transition: transform 0.3s, background 0.3s;">
+1935:           <div class="card-content"><h3 style="margin-bottom: 12px;">Melody Sleep Flow</h3><p style="color:#A0A0C0; margin-bottom: 20px;">Warm melodic textures with gentle bell tones.</p></div>
+1936:           <div class="card-illustration" style="font-size: 2rem;">🎼</div>
+1937:         </div>
+1938:         <div class="sleep-library-card" data-track-index="2" style="background-color: #2D2D5E; color: white; border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 28px; cursor: pointer; transition: transform 0.3s, background 0.3s;">
+1939:           <div class="card-content"><h3 style="margin-bottom: 12px;">Rain & Piano</h3><p style="color:#A0A0C0; margin-bottom: 20px;">The soothing sound of rain mixed with slow chords.</p></div>
+1940:           <div class="card-illustration" style="font-size: 2rem;">🌧️</div>
+1941:         </div>
+1942:       </div>
+1943:     </div>
+1944:   </section>
+1945: `;
+1946: 
+1947: const WhiteNoise = `
+1948:   <section class="page-hero" style="background-color: #E8F5E9; padding: 100px 0;">
+1949:     <div class="container text-center">
+1950:       <h1 class="hero-title" style="margin-bottom: 24px; font-size: 4rem;">Wind & Rain</h1>
+1951:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px; font-size: 1.25rem;">Natural wind textures and small rain drops to mask distractions and help your brain relax.</p>
+1952:     </div>
+1953:   </section>
+1954:   <section style="padding: 100px 0; background: #fafbfc;">
+1955:     <div class="container" style="max-width: 1000px;">
+1956:       
+1957:       <div style="text-align: center; margin-bottom: 64px;">
+1958:         <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Nature's Soothing Patterns</h2>
+1959:         <p style="color: var(--color-text-muted); font-size: 1.125rem;">Choose a natural soundscape to help soften distractions and support calm focus.</p>
+1960:       </div>
+1961: 
+1962:       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 64px;">
+1963:         <div style="background: white; border: 1px solid #EAEAEA; border-radius: 24px; padding: 40px; text-align: center; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+1964:           <div style="position: absolute; top: -50px; left: -50px; width: 100px; height: 100px; background: rgba(200,200,200,0.1); border-radius: 50%;"></div>
+1965:           <div style="width: 64px; height: 64px; background: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">🌬️</div>
+1966:           <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Wind Noise</h3>
+1967:           <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Gentle gusts with airy movement and soft low-end breath.</p>
+1968:           <button id="wind-noise-play" class="btn btn-outline" style="width: 100%; border-radius: 30px;">Play</button>
+1969:         </div>
+1970:         
+1971:         <div style="background: white; border: 1px solid #EAEAEA; border-radius: 24px; padding: 40px; text-align: center; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; transform: scale(1.05); z-index: 1; border-top: 4px solid #87CEFA;">
+1972:           <div style="position: absolute; top: 10px; right: 10px; font-size: 0.75rem; background: #87CEFA; color: #20456A; padding: 4px 12px; border-radius: 12px; font-weight: bold;">Small Drops</div>
+1973:           <div style="width: 64px; height: 64px; background: #E0F4FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">💧</div>
+1974:           <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Rain Drops</h3>
+1975:           <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Soft, textured drops with a delicate high-frequency shimmer.</p>
+1976:           <button id="rain-noise-play" class="btn btn-primary" style="width: 100%; border-radius: 30px; background: #87CEFA; color: #20456A; border: none;">Play</button>
+1977:         </div>
+1978:         
+1979:         <div style="background: white; border: 1px solid #EAEAEA; border-radius: 24px; padding: 40px; text-align: center; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;">
+1980:           <div style="position: absolute; bottom: -50px; right: -50px; width: 100px; height: 100px; background: rgba(139,69,19,0.1); border-radius: 50%;"></div>
+1981:           <div style="width: 64px; height: 64px; background: #F5DEB3; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin: 0 auto 24px;">🐻</div>
+1982:           <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Brown Noise</h3>
+1983:           <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Rich, low-frequency rumble. Sounds like distant thunder or a strong river current.</p>
+1984:           <button id="brown-noise-play" class="btn btn-outline" style="width: 100%; border-radius: 30px;">Play</button>
+1985:         </div>
+1986:       </div>
+1987:       <div style="text-align:center; margin-top: 32px;">
+1988:         <label for="noise-volume" style="font-weight:700; display:block; margin-bottom: 12px;">Volume</label>
+1989:         <input id="noise-volume" type="range" min="0" max="100" value="50" style="width: 320px; max-width: 100%;">
+1990:         <p id="noise-status" style="margin-top: 18px; color: var(--color-text-muted);">No sound playing.</p>
+1991:       </div>
+1992: 
+1993:     </div>
+1994:   </section>
+1995: `;
+1996: 
+1997: const Assessment = `
+1998:   <section class="page-hero" style="background-color: #F3E5F5; padding: 80px 0;">
+1999:     <div class="container text-center">
+2000:       <h1 class="hero-title" style="margin-bottom: 20px;">Stress Check-in</h1>
+2001:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">A short 5-question assessment to help you understand your current stress levels.</p>
+2002:     </div>
+2003:   </section>
+2004:   <section style="padding: 80px 0; background: #fafbfc; min-height: 50vh;">
+2005:     <div class="container" style="max-width: 700px;">
+2006:       <div style="background: white; padding: 40px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+2007:         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+2008:           <h3 style="margin: 0;">Question 1 of 5</h3>
+2009:           <span style="color: var(--color-primary); font-weight: 600;">20% Completed</span>
+2010:         </div>
+2011:         <div style="height: 8px; background: #EAEAEA; border-radius: 4px; margin-bottom: 40px;">
+2012:           <div style="height: 100%; width: 20%; background: var(--color-primary); border-radius: 4px;"></div>
+2013:         </div>
+2014:         
+2015:         <h2 style="font-size: 1.5rem; margin-bottom: 32px;">In the last week, how often have you felt overwhelmed by your responsibilities?</h2>
+2016:         
+2017:         <div style="display: flex; flex-direction: column; gap: 16px;">
+2018:           <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--color-primary)'" onmouseout="this.style.borderColor='#EAEAEA'">
+2019:             <input type="radio" name="q1" style="margin-right: 16px; transform: scale(1.5);">
+2020:             <span style="font-size: 1.1rem;">Never</span>
+2021:           </label>
+2022:           <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--color-primary)'" onmouseout="this.style.borderColor='#EAEAEA'">
+2023:             <input type="radio" name="q1" style="margin-right: 16px; transform: scale(1.5);">
+2024:             <span style="font-size: 1.1rem;">Rarely</span>
+2025:           </label>
+2026:           <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--color-primary)'" onmouseout="this.style.borderColor='#EAEAEA'">
+2027:             <input type="radio" name="q1" style="margin-right: 16px; transform: scale(1.5);">
+2028:             <span style="font-size: 1.1rem;">Sometimes</span>
+2029:           </label>
+2030:           <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--color-primary)'" onmouseout="this.style.borderColor='#EAEAEA'">
+2031:             <input type="radio" name="q1" style="margin-right: 16px; transform: scale(1.5);">
+2032:             <span style="font-size: 1.1rem;">Often</span>
+2033:           </label>
+2034:           <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--color-primary)'" onmouseout="this.style.borderColor='#EAEAEA'">
+2035:             <input type="radio" name="q1" style="margin-right: 16px; transform: scale(1.5);">
+2036:             <span style="font-size: 1.1rem;">Always</span>
+2037:           </label>
+2038:         </div>
+2039:         
+2040:         <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+2041:           <button id="prev-question-btn" class="btn btn-outline" style="opacity: 0.5; cursor: not-allowed;" disabled>Previous</button>
+2042:           <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+2043:         </div>
+2044:       </div>
+2045:     </div>
+2046:   </section>
+2047: `;
+2048: 
+2049: const assessmentQuestions = [
+2050:   {
+2051:     prompt: 'In the last week, how often have you felt overwhelmed by your responsibilities?',
+2052:     options: ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+2053:   },
+2054:   {
+2055:     prompt: 'How often have you had trouble relaxing?',
+2056:     options: ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+2057:   },
+2058:   {
+2059:     prompt: 'How often have you felt nervous, anxious, or on edge?',
+2060:     options: ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+2061:   },
+2062:   {
+2063:     prompt: 'How often have you been able to control irritability?',
+2064:     options: ['Always', 'Often', 'Sometimes', 'Rarely', 'Never']
+2065:   },
+2066:   {
+2067:     prompt: 'How often have you felt overwhelming fatigue?',
+2068:     options: ['Never', 'Rarely', 'Sometimes', 'Often', 'Always']
+2069:   }
+2070: ];
+2071: 
+2072: const assessmentState = {
+2073:   index: 0,
+2074:   answers: []
+2075: };
+2076: 
+2077: function renderAssessment() {
+2078:   const questionData = assessmentQuestions[assessmentState.index];
+2079:   const container = document.getElementById('main-content');
+2080:   if (!container) return;
+2081: 
+2082:   container.innerHTML = `
+2083:   <section class="page-hero" style="background-color: #F3E5F5; padding: 80px 0;">
+2084:     <div class="container text-center">
+2085:       <h1 class="hero-title" style="margin-bottom: 20px;">Stress Check-in</h1>
+2086:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">A short 5-question assessment to help you understand your current stress levels.</p>
+2087:     </div>
+2088:   </section>
+2089:   <section style="padding: 80px 0; background: #fafbfc; min-height: 50vh;">
+2090:     <div class="container" style="max-width: 700px;">
+2091:       <div style="background: white; padding: 40px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+2092:         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+2093:           <h3 style="margin: 0;">Question ${assessmentState.index + 1} of ${assessmentQuestions.length}</h3>
+2094:           <span style="color: var(--color-primary); font-weight: 600;">${Math.round(((assessmentState.index + 1) / assessmentQuestions.length) * 100)}% Completed</span>
+2095:         </div>
+2096:         <div style="height: 8px; background: #EAEAEA; border-radius: 4px; margin-bottom: 40px;">
+2097:           <div style="height: 100%; width: ${((assessmentState.index + 1) / assessmentQuestions.length) * 100}%; background: var(--color-primary); border-radius: 4px;"></div>
+2098:         </div>
+2099:         <h2 style="font-size: 1.5rem; margin-bottom: 32px;">${questionData.prompt}</h2>
+2100:         <div style="display: flex; flex-direction: column; gap: 16px;" id="assess-options"></div>
+2101:         <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+2102:           <button id="prev-question-btn" class="btn btn-outline">Previous</button>
+2103:           <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+2104:         </div>
+2105:       </div>
+2106:     </div>
+2107:   </section>
+2108: `;
+2109: 
+2110:   const optionsContainer = document.getElementById('assess-options');
+2111:   questionData.options.forEach((option, i) => {
+2112:     const selected = assessmentState.answers[assessmentState.index] === i;
+2113:     optionsContainer.insertAdjacentHTML('beforeend', `
+2114:       <label style="display: flex; align-items: center; padding: 20px; border: 1px solid #EAEAEA; border-radius: 12px; cursor: pointer; ${selected ? 'border-color: var(--color-primary); background: #E9F8F1;' : ''}">
+2115:         <input type="radio" name="question" value="${i}" style="margin-right: 16px; transform: scale(1.5);" ${selected ? 'checked' : ''}>
+2116:         <span style="font-size: 1.1rem;">${option}</span>
+2117:       </label>
+2118:     `);
+2119:   });
+2120: 
+2121:   const prevButton = document.getElementById('prev-question-btn');
+2122:   const nextButton = document.getElementById('next-question-btn');
+2123: 
+2124:   prevButton.disabled = assessmentState.index === 0;
+2125:   prevButton.style.opacity = assessmentState.index === 0 ? '0.5' : '1';
+2126:   prevButton.style.cursor = assessmentState.index === 0 ? 'not-allowed' : 'pointer';
+2127: 
+2128:   const selectInput = document.querySelector('input[name="question"]:checked');
+2129:   if (!selectInput) {
+2130:     nextButton.disabled = true;
+2131:     nextButton.style.opacity = '0.5';
+2132:     nextButton.style.cursor = 'not-allowed';
+2133:   }
+2134: 
+2135:   optionsContainer.querySelectorAll('input[name="question"]').forEach((radio) => {
+2136:     radio.addEventListener('change', () => {
+2137:       nextButton.disabled = false;
+2138:       nextButton.style.opacity = '1';
+2139:       nextButton.style.cursor = 'pointer';
+2140:       assessmentState.answers[assessmentState.index] = Number(radio.value);
+2141:     });
+2142:   });
+2143: 
+2144:   prevButton.onclick = () => {
+2145:     if (assessmentState.index > 0) {
+2146:       assessmentState.index -= 1;
+2147:       renderAssessment();
+2148:     }
+2149:   };
+2150: 
+2151:   nextButton.onclick = () => {
+2152:     const checked = document.querySelector('input[name="question"]:checked');
+2153:     if (!checked) return;
+2154: 
+2155:     assessmentState.answers[assessmentState.index] = Number(checked.value);
+2156: 
+2157:     if (assessmentState.index < assessmentQuestions.length - 1) {
+2158:       assessmentState.index += 1;
+2159:       renderAssessment();
+2160:     } else {
+2161:       const score = assessmentState.answers.reduce((sum, value) => sum + value, 0);
+2162:       const interpretation = score <= 6 ? 'Low stress' : score <= 12 ? 'Moderate stress' : 'High stress';
+2163:       const tips = [];
+2164: 
+2165:       // Personalized tips based on responses
+2166:       if ([3, 4].includes(assessmentState.answers[0])) {
+2167:         tips.push('Break tasks into smaller steps and take short mental breaks between responsibilities.');
+2168:       }
+2169:       if ([3, 4].includes(assessmentState.answers[1])) {
+2170:         tips.push('Try daily relaxation exercises (deep breathing, body scan, progressive muscle relaxation).');
+2171:       }
+2172:       if ([3, 4].includes(assessmentState.answers[2])) {
+2173:         tips.push('Use grounding techniques such as 5-4-3-2-1 to reduce anxiety in the moment.');
+2174:       }
+2175:       if ([0, 1].includes(assessmentState.answers[3])) {
+2176:         tips.push('Practice patience techniques and set boundaries to avoid irritability spikes.');
+2177:       }
+2178:       if ([3, 4].includes(assessmentState.answers[4])) {
+2179:         tips.push('Improve sleep hygiene: consistent bedtime, screen-free wind-down, and nighttime routine.');
+2180:       }
+2181: 
+2182:       if (!tips.length) {
+2183:         tips.push('Great job! Keep maintaining your current wellness habits and check in again regularly.');
+2184:       }
+2185: 
+2186:       const relevantGain = interpretation === 'High stress' ? 'Focus on immediate stress reduction practices and weekly review.' : interpretation === 'Moderate stress' ? 'Keep consistent habits and build a small daily routine.' : 'Maintain current habits and take a periodic check-in.';
+2187: 
+2188:       container.innerHTML = `
+2189:         <section class="page-hero" style="background-color: #F3E5F5; padding: 80px 0;">
+2190:           <div class="container text-center">
+2191:             <h1 class="hero-title">Assessment complete</h1>
+2192:             <p class="hero-subtitle">Your stress level: ${interpretation}</p>
+2193:           </div>
+2194:         </section>
+2195:         <section style="padding: 80px 0; background: #fafbfc; min-height: 50vh;">
+2196:           <div class="container" style="max-width: 700px; text-align: center;">
+2197:             <div style="background: white; padding: 40px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
+2198:               <p>Thanks for completing the check-in. Based on your answers, here are your personalized next actions:</p>
+2199:               <h3>03. Quick improvement focus</h3>
+2200:               <p style="margin-top: 0; font-weight: 600;">${relevantGain}</p>
+2201:               <h3>02. Targeted recommendations</h3>
+2202:               <ul style="text-align: left; margin: 10px 0 20px; padding-left: 18px;">
+2203:                 ${tips.map((tip) => `<li style="margin-bottom: 8px;">${tip}</li>`).join('')}
+2204:               </ul>
+2205:               <h3>01. Your response summary</h3>
+2206:               <ul style="text-align:left; margin-top: 10px;">
+2207:                 ${assessmentQuestions.map((q, idx) => `<li><strong>${q.prompt}</strong><br/>${q.options[assessmentState.answers[idx]] || 'Not answered'}</li>`).join('')}
+2208:               </ul>
+2209:               <button class="btn btn-primary" style="margin-top: 24px;" onclick="window.location.hash='#/'">Back to Home</button>
+2210:             </div>
+2211:           </div>
+2212:         </section>
+2213:       `;
+2214:     }
+2215:   };
+2216: }
+2217: 
+2218: const sleepTracks = [
+2219:   {
+2220:     title: 'Deep Melody Tunes',
+2221:     description: 'Harmonic frequencies and slow, deep cello melodies to guide you into profound sleep.',
+2222:     durationSeconds: 8 * 60 * 60,
+2223:     createSource: (ctx) => {
+2224:       const masterGain = ctx.createGain();
+2225:       masterGain.gain.value = 0.14;
+2226:       masterGain.connect(ctx.destination);
+2227: 
+2228:       const filter = ctx.createBiquadFilter();
+2229:       filter.type = 'lowpass';
+2230:       filter.frequency.value = 700;
+2231:       filter.Q.value = 1.2;
+2232: 
+2233:       const osc1 = ctx.createOscillator();
+2234:       osc1.type = 'sine';
+2235:       osc1.frequency.value = 95;
+2236: 
+2237:       const osc2 = ctx.createOscillator();
+2238:       osc2.type = 'triangle';
+2239:       osc2.frequency.value = 155;
+2240: 
+2241:       const lfo = ctx.createOscillator();
+2242:       lfo.type = 'sine';
+2243:       lfo.frequency.value = 0.04;
+2244: 
+2245:       const lfoGain = ctx.createGain();
+2246:       lfoGain.gain.value = 35;
+2247:       lfo.connect(lfoGain);
+2248:       lfoGain.connect(osc1.frequency);
+2249:       lfoGain.connect(osc2.frequency);
+2250: 
+2251:       osc1.connect(filter);
+2252:       osc2.connect(filter);
+2253:       filter.connect(masterGain);
+2254: 
+2255:       osc1.start();
+2256:       osc2.start();
+2257:       lfo.start();
+2258: 
+2259:       return {
+2260:         stop: () => {
+2261:           osc1.stop();
+2262:           osc2.stop();
+2263:           lfo.stop();
+2264:           masterGain.disconnect();
+2265:           filter.disconnect();
+2266:         }
+2267:       };
+2268:     }
+2269:   },
+2270:   {
+2271:     title: 'Melody Sleep Flow',
+2272:     description: 'Warm melodic textures with gentle bell tones, designed for deep calm and restful sleep.',
+2273:     durationSeconds: 5 * 60 * 60,
+2274:     createSource: (ctx, gainNode) => {
+2275:       const masterGain = gainNode || ctx.createGain();
+2276:       masterGain.gain.value = 0.12;
+2277: 
+2278:       const melody = ctx.createOscillator();
+2279:       melody.type = 'triangle';
+2280:       melody.frequency.value = 110;
+2281: 
+2282:       const harmony = ctx.createOscillator();
+2283:       harmony.type = 'sine';
+2284:       harmony.frequency.value = 165;
+2285: 
+2286:       const melodyGain = ctx.createGain();
+2287:       melodyGain.gain.value = 0.08;
+2288:       melody.connect(melodyGain);
+2289:       melodyGain.connect(masterGain);
+2290: 
+2291:       const harmonyGain = ctx.createGain();
+2292:       harmonyGain.gain.value = 0.06;
+2293:       harmony.connect(harmonyGain);
+2294: 
+2295:       const filter = ctx.createBiquadFilter();
+2296:       filter.type = 'lowpass';
+2297:       filter.frequency.value = 900;
+2298:       filter.Q.value = 0.9;
+2299:       melodyGain.connect(filter);
+2300:       harmonyGain.connect(filter);
+2301:       filter.connect(masterGain);
+2302: 
+2303:       const lfo = ctx.createOscillator();
+2304:       lfo.type = 'sine';
+2305:       lfo.frequency.value = 0.06;
+2306:       const lfoGain = ctx.createGain();
+2307:       lfoGain.gain.value = 20;
+2308:       lfo.connect(lfoGain);
+2309:       lfoGain.connect(filter.frequency);
+2310: 
+2311:       melody.start();
+2312:       harmony.start();
+2313:       lfo.start();
+2314: 
+2315:       return {
+2316:         stop: () => {
+2317:           melody.stop();
+2318:           harmony.stop();
+2319:           lfo.stop();
+2320:           masterGain.disconnect();
+2321:           filter.disconnect();
+2322:           melodyGain.disconnect();
+2323:           harmonyGain.disconnect();
+2324:         }
+2325:       };
+2326:     }
+2327:   },
+2328:   {
+2329:     title: 'Rain & Piano',
+2330:     description: 'Soft rainfall textures mixed with slow piano chimes for a restful soundscape.',
+2331:     durationSeconds: 6 * 60 * 60,
+2332:     createSource: (ctx, gainNode) => {
+2333:       const masterGain = gainNode || ctx.createGain();
+2334:       masterGain.gain.value = 0.12;
+2335:       if (!gainNode) {
+2336:         masterGain.connect(ctx.destination);
+2337:       }
+2338: 
+2339:       const noiseBuffer = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
+2340:       const data = noiseBuffer.getChannelData(0);
+2341:       for (let i = 0; i < data.length; i += 1) {
+2342:         data[i] = Math.random() * 2 - 1;
+2343:       }
+2344: 
+2345:       const noiseSource = ctx.createBufferSource();
+2346:       noiseSource.buffer = noiseBuffer;
+2347:       noiseSource.loop = true;
+2348: 
+2349:       const noiseFilter = ctx.createBiquadFilter();
+2350:       noiseFilter.type = 'bandpass';
+2351:       noiseFilter.frequency.value = 400;
+2352:       noiseFilter.Q.value = 0.9;
+2353:       noiseSource.connect(noiseFilter);
+2354:       noiseFilter.connect(masterGain);
+2355: 
+2356:       const piano = ctx.createOscillator();
+2357:       piano.type = 'triangle';
+2358:       piano.frequency.value = 220;
+2359: 
+2360:       const pianoGain = ctx.createGain();
+2361:       pianoGain.gain.value = 0.09;
+2362:       piano.connect(pianoGain);
+2363:       pianoGain.connect(masterGain);
+2364: 
+2365:       const lfo = ctx.createOscillator();
+2366:       lfo.type = 'sine';
+2367:       lfo.frequency.value = 0.05;
+2368:       const lfoGain = ctx.createGain();
+2369:       lfoGain.gain.value = 20;
+2370:       lfo.connect(lfoGain);
+2371:       lfoGain.connect(piano.frequency);
+2372: 
+2373:       noiseSource.start();
+2374:       piano.start();
+2375:       lfo.start();
+2376: 
+2377:       return {
+2378:         stop: () => {
+2379:           noiseSource.stop();
+2380:           piano.stop();
+2381:           lfo.stop();
+2382:           masterGain.disconnect();
+2383:           noiseFilter.disconnect();
+2384:           pianoGain.disconnect();
+2385:         }
+2386:       };
+2387:     }
+2388:   }
+2389: ];
+2390: 
+2391: let sleepAudioContext = null;
+2392: let sleepGainNode = null;
+2393: let sleepAudioPlayer = null;
+2394: let currentSleepTrackIndex = 0;
+2395: let sleepTrackStartTime = 0;
+2396: let sleepTrackElapsedBeforePause = 0;
+2397: let sleepProgressTimer = null;
+2398: 
+2399: function ensureSleepAudioContext() {
+2400:   if (!sleepAudioContext) {
+2401:     sleepAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+2402:   }
+2403:   if (sleepAudioContext.state === 'suspended') {
+2404:     sleepAudioContext.resume();
+2405:   }
+2406:   return sleepAudioContext;
+2407: }
+2408: 
+2409: let noiseAudioContext = null;
+2410: let noiseGainNode = null;
+2411: let noiseSourceNode = null;
+2412: let noiseAuxNodes = [];
+2413: let currentNoiseType = null;
+2414: 
+2415: function ensureNoiseAudioContext() {
+2416:   if (!noiseAudioContext) {
+2417:     noiseAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+2418:   }
+2419:   if (noiseAudioContext.state === 'suspended') {
+2420:     noiseAudioContext.resume();
+2421:   }
+2422:   return noiseAudioContext;
+2423: }
+2424: 
+2425: function createNoiseBuffer(ctx, seconds = 2) {
+2426:   const buffer = ctx.createBuffer(1, ctx.sampleRate * seconds, ctx.sampleRate);
+2427:   const data = buffer.getChannelData(0);
+2428:   for (let i = 0; i < data.length; i += 1) {
+2429:     data[i] = Math.random() * 2 - 1;
+2430:   }
+2431:   return buffer;
+2432: }
+2433: 
+2434: function createNoiseSource(ctx, type) {
+2435:   const source = ctx.createBufferSource();
+2436:   source.buffer = createNoiseBuffer(ctx);
+2437:   source.loop = true;
+2438:   const auxNodes = [];
+2439: 
+2440:   if (type === 'wind') {
+2441:     const filter = ctx.createBiquadFilter();
+2442:     filter.type = 'lowpass';
+2443:     filter.frequency.value = 900;
+2444:     filter.Q.value = 0.8;
+2445: 
+2446:     const motionGain = ctx.createGain();
+2447:     motionGain.gain.value = 0.08;
+2448: 
+2449:     const lfo = ctx.createOscillator();
+2450:     lfo.type = 'sine';
+2451:     lfo.frequency.value = 0.08;
+2452:     const lfoGain = ctx.createGain();
+2453:     lfoGain.gain.value = 0.07;
+2454:     lfo.connect(lfoGain);
+2455:     lfoGain.connect(motionGain.gain);
+2456: 
+2457:     source.connect(filter);
+2458:     filter.connect(motionGain);
+2459:     auxNodes.push(lfo);
+2460:     return { source, output: motionGain, auxNodes };
+2461:   }
+2462: 
+2463:   if (type === 'rain') {
+2464:     const highpass = ctx.createBiquadFilter();
+2465:     highpass.type = 'highpass';
+2466:     highpass.frequency.value = 1700;
+2467:     highpass.Q.value = 0.75;
+2468: 
+2469:     const shimmer = ctx.createBiquadFilter();
+2470:     shimmer.type = 'lowpass';
+2471:     shimmer.frequency.value = 8000;
+2472:     shimmer.Q.value = 0.7;
+2473: 
+2474:     const dropGain = ctx.createGain();
+2475:     dropGain.gain.value = 0.09;
+2476: 
+2477:     const tremolo = ctx.createOscillator();
+2478:     tremolo.type = 'sine';
+2479:     tremolo.frequency.value = 9.5;
+2480:     const tremoloGain = ctx.createGain();
+2481:     tremoloGain.gain.value = 0.075;
+2482:     tremolo.connect(tremoloGain);
+2483:     tremoloGain.connect(dropGain.gain);
+2484: 
+2485:     source.connect(highpass);
+2486:     highpass.connect(shimmer);
+2487:     shimmer.connect(dropGain);
+2488:     auxNodes.push(tremolo);
+2489:     return { source, output: dropGain, auxNodes };
+2490:   }
+2491: 
+2492:   if (type === 'brown') {
+2493:     const filter = ctx.createBiquadFilter();
+2494:     filter.type = 'lowpass';
+2495:     filter.frequency.value = 450;
+2496:     filter.Q.value = 1.2;
+2497:     source.connect(filter);
+2498:     return { source, output: filter, auxNodes };
+2499:   }
+2500: 
+2501:   return { source, output: source, auxNodes };
+2502: }
+2503: 
+2504: function stopNoisePlayback() {
+2505:   if (noiseSourceNode) {
+2506:     try {
+2507:       noiseSourceNode.stop();
+2508:     } catch (e) {
+2509:       // ignore already-stopped source
+2510:     }
+2511:     noiseSourceNode.disconnect();
+2512:     noiseSourceNode = null;
+2513:   }
+2514:   noiseAuxNodes.forEach((node) => {
+2515:     try {
+2516:       if (node.stop) node.stop();
+2517:     } catch (e) {
+2518:       // ignore already-stopped auxiliary nodes
+2519:     }
+2520:     try {
+2521:       node.disconnect();
+2522:     } catch (e) {
+2523:       // ignore disconnect errors
+2524:     }
+2525:   });
+2526:   noiseAuxNodes = [];
+2527:   if (noiseGainNode) {
+2528:     noiseGainNode.disconnect();
+2529:     noiseGainNode = null;
+2530:   }
+2531:   currentNoiseType = null;
+2532:   updateNoiseButtons();
+2533: }
+2534: 
+2535: function updateNoiseButtons() {
+2536:   ['wind', 'rain', 'brown'].forEach((type) => {
+2537:     const button = document.getElementById(`${type}-noise-play`);
+2538:     if (button) {
+2539:       button.textContent = currentNoiseType === type ? 'Pause' : 'Play';
+2540:     }
+2541:   });
+2542: 
+2543:   const status = document.getElementById('noise-status');
+2544:   if (status) {
+2545:     status.textContent = currentNoiseType
+2546:       ? `${currentNoiseType === 'rain' ? 'Rain drops' : currentNoiseType.charAt(0).toUpperCase() + currentNoiseType.slice(1)} playing.`
+2547:       : 'No sound playing.';
+2548:   }
+2549: }
+2550: 
+2551: function playNoise(type) {
+2552:   const ctx = ensureNoiseAudioContext();
+2553:   stopNoisePlayback();
+2554: 
+2555:   noiseGainNode = ctx.createGain();
+2556:   const volumeControl = document.getElementById('noise-volume');
+2557:   noiseGainNode.gain.value = volumeControl ? Number(volumeControl.value) / 100 : 0.5;
+2558:   noiseGainNode.connect(ctx.destination);
+2559: 
+2560:   const { source, output, auxNodes = [] } = createNoiseSource(ctx, type);
+2561:   output.connect(noiseGainNode);
+2562:   source.start();
+2563: 
+2564:   noiseSourceNode = source;
+2565:   noiseAuxNodes = auxNodes;
+2566:   currentNoiseType = type;
+2567:   updateNoiseButtons();
+2568: }
+2569: 
+2570: function initWindRain() {
+2571:   const volumeControl = document.getElementById('noise-volume');
+2572:   const windBtn = document.getElementById('wind-noise-play');
+2573:   const rainBtn = document.getElementById('rain-noise-play');
+2574:   const brownBtn = document.getElementById('brown-noise-play');
+2575: 
+2576:   if (windBtn) {
+2577:     windBtn.addEventListener('click', () => {
+2578:       if (currentNoiseType === 'wind') stopNoisePlayback();
+2579:       else playNoise('wind');
+2580:     });
+2581:   }
+2582:   if (rainBtn) {
+2583:     rainBtn.addEventListener('click', () => {
+2584:       if (currentNoiseType === 'rain') stopNoisePlayback();
+2585:       else playNoise('rain');
+2586:     });
+2587:   }
+2588:   if (brownBtn) {
+2589:     brownBtn.addEventListener('click', () => {
+2590:       if (currentNoiseType === 'brown') stopNoisePlayback();
+2591:       else playNoise('brown');
+2592:     });
+2593:   }
+2594: 
+2595:   if (volumeControl) {
+2596:     volumeControl.addEventListener('input', () => {
+2597:       if (noiseGainNode) {
+2598:         noiseGainNode.gain.value = Number(volumeControl.value) / 100;
+2599:       }
+2600:     });
+2601:   }
+2602: 
+2603:   updateNoiseButtons();
+2604: }
+2605: 
+2606: function initMindfulnessWork() {
+2607:   const exerciseBtn = document.getElementById('play-exercise-btn');
+2608:   const closeBtn = document.getElementById('close-exercise-btn');
+2609:   const panel = document.getElementById('exercise-panel');
+2610: 
+2611:   if (exerciseBtn && panel) {
+2612:     exerciseBtn.addEventListener('click', () => {
+2613:       panel.style.display = 'block';
+2614:       exerciseBtn.style.display = 'none';
+2615:       panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+2616:     });
+2617:   }
+2618: 
+2619:   if (closeBtn && panel && exerciseBtn) {
+2620:     closeBtn.addEventListener('click', () => {
+2621:       panel.style.display = 'none';
+2622:       exerciseBtn.style.display = 'inline-flex';
+2623:       exerciseBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+2624:     });
+2625:   }
+2626: }
+2627: 
+2628: function formatDuration(seconds) {
+2629:   const hrs = Math.floor(seconds / 3600);
+2630:   const mins = Math.floor((seconds % 3600) / 60);
+2631:   const secs = Math.floor(seconds % 60);
+2632:   if (hrs > 0) {
+2633:     return `${hrs}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+2634:   }
+2635:   return `${mins}:${String(secs).padStart(2, '0')}`;
+2636: }
+2637: 
+2638: function updateSleepUI() {
+2639:   const trackInfo = sleepTracks[currentSleepTrackIndex];
+2640:   const titleElement = document.getElementById('sleep-track-title');
+2641:   const descElement = document.getElementById('sleep-track-desc');
+2642:   const timeElement = document.getElementById('sleep-current-time');
+2643:   const totalElement = document.getElementById('sleep-total-time');
+2644:   const progressFill = document.getElementById('sleep-progress-fill');
+2645:   const playButton = document.getElementById('sleep-play-button');
+2646:   const totalTime = trackInfo.durationSeconds;
+2647: 
+2648:   if (titleElement) titleElement.textContent = trackInfo.title;
+2649:   if (descElement) descElement.textContent = trackInfo.description;
+2650:   if (totalElement) totalElement.textContent = formatDuration(totalTime);
+2651: 
+2652:   const elapsed = sleepAudioPlayer && sleepTrackStartTime ? ((Date.now() - sleepTrackStartTime) / 1000) + sleepTrackElapsedBeforePause : sleepTrackElapsedBeforePause;
+2653:   const displayTime = Math.min(elapsed, totalTime);
+2654: 
+2655:   if (timeElement) timeElement.textContent = formatDuration(displayTime);
+2656:   if (progressFill) progressFill.style.width = `${Math.min((displayTime / totalTime) * 100, 100)}%`;
+2657:   if (playButton) playButton.textContent = sleepAudioPlayer ? '❚❚' : '▶';
+2658: }
+2659: 
+2660: function playSleepTrack(index) {
+2661:   const ctx = ensureSleepAudioContext();
+2662:   stopSleepAudio();
+2663:   currentSleepTrackIndex = index;
+2664:   const volumeControl = document.getElementById('sleep-volume');
+2665:   sleepGainNode = ctx.createGain();
+2666:   sleepGainNode.gain.value = volumeControl ? Number(volumeControl.value) / 100 : 0.5;
+2667:   sleepGainNode.connect(ctx.destination);
+2668: 
+2669:   const trackInfo = sleepTracks[index];
+2670:   sleepAudioPlayer = trackInfo.createSource(ctx, sleepGainNode);
+2671:   sleepTrackStartTime = Date.now();
+2672:   sleepTrackElapsedBeforePause = 0;
+2673:   sleepProgressTimer = setInterval(updateSleepUI, 250);
+2674:   updateSleepUI();
+2675: }
+2676: 
+2677: function stopSleepAudio() {
+2678:   if (sleepAudioPlayer && sleepAudioPlayer.stop) {
+2679:     sleepAudioPlayer.stop();
+2680:   }
+2681:   sleepAudioPlayer = null;
+2682:   if (sleepGainNode) {
+2683:     sleepGainNode.disconnect();
+2684:     sleepGainNode = null;
+2685:   }
+2686:   if (sleepProgressTimer) {
+2687:     clearInterval(sleepProgressTimer);
+2688:     sleepProgressTimer = null;
+2689:   }
+2690:   updateSleepUI();
+2691: }
+2692: 
+2693: function pauseSleepTrack() {
+2694:   if (!sleepAudioPlayer) return;
+2695:   sleepTrackElapsedBeforePause += (Date.now() - sleepTrackStartTime) / 1000;
+2696:   stopSleepAudio();
+2697: }
+2698: 
+2699: function toggleSleepPlayback() {
+2700:   if (sleepAudioPlayer) {
+2701:     pauseSleepTrack();
+2702:   } else {
+2703:     playSleepTrack(currentSleepTrackIndex);
+2704:   }
+2705: }
+2706: 
+2707: function initSleepMusic() {
+2708:   const playButton = document.getElementById('sleep-play-button');
+2709:   const playToggle = document.getElementById('sleep-play-toggle');
+2710:   const nextButton = document.getElementById('sleep-next-track');
+2711:   const prevButton = document.getElementById('sleep-previous-track');
+2712:   const volumeControl = document.getElementById('sleep-volume');
+2713:   const trackCards = document.querySelectorAll('.sleep-library-card');
+2714: 
+2715:   if (playButton) {
+2716:     playButton.onclick = toggleSleepPlayback;
+2717:   }
+2718:   if (playToggle) {
+2719:     playToggle.onclick = toggleSleepPlayback;
+2720:   }
+2721:   if (nextButton) {
+2722:     nextButton.onclick = () => {
+2723:       currentSleepTrackIndex = (currentSleepTrackIndex + 1) % sleepTracks.length;
+2724:       playSleepTrack(currentSleepTrackIndex);
+2725:     };
+2726:   }
+2727:   if (prevButton) {
+2728:     prevButton.onclick = () => {
+2729:       currentSleepTrackIndex = (currentSleepTrackIndex - 1 + sleepTracks.length) % sleepTracks.length;
+2730:       playSleepTrack(currentSleepTrackIndex);
+2731:     };
+2732:   }
+2733:   if (volumeControl) {
+2734:     volumeControl.oninput = () => {
+2735:       const gainValue = Number(volumeControl.value) / 100;
+2736:       if (sleepGainNode) {
+2737:         sleepGainNode.gain.value = gainValue;
+2738:       }
+2739:     };
+2740:   }
+2741:   trackCards.forEach((card) => {
+2742:     card.addEventListener('click', () => {
+2743:       const index = Number(card.dataset.trackIndex);
+2744:       if (!Number.isNaN(index)) {
+2745:         playSleepTrack(index);
+2746:       }
+2747:     });
+2748:     card.addEventListener('mouseover', () => {
+2749:       card.style.background = '#363670';
+2750:       card.style.transform = 'translateY(-4px)';
+2751:     });
+2752:     card.addEventListener('mouseout', () => {
+2753:       card.style.background = '#2D2D5E';
+2754:       card.style.transform = 'translateY(0)';
+2755:     });
+2756:   });
+2757: 
+2758:   updateSleepUI();
+2759: }
+2760: 
+2761: const MindfulGames = `
+2762:   <section class="page-hero" style="background-color: #E3F2FD; padding: 80px 0;">
+2763:     <div class="container text-center">
+2764:       <h1 class="hero-title" style="margin-bottom: 20px;">Mindful Games</h1>
+2765:       <p class="hero-subtitle" style="margin: 0 auto; max-width: 600px;">Take a moment to play, relax, and center yourself.</p>
+2766:     </div>
+2767:   </section>
+2768:   <section class="library-section" style="padding: 60px 0; background: #FAFAFA;">
+2769:     <div class="container">
+2770:       <div class="library-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+2771:         <!-- Breathing Sync -->
+2772:         <div class="library-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer; border: 1px solid #EAEAEA;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'" onclick="window.location.hash='#/game/breathing'">
+2773:           <div style="height: 160px; background: linear-gradient(135deg, #A8E6CF, #DCEDC1); display: flex; align-items: center; justify-content: center;">
+2774:             <div style="width: 60px; height: 60px; border-radius: 50%; background: white; animation: pulse 3s infinite ease-in-out;"></div>
+2775:             <style>@keyframes pulse { 0% { transform: scale(0.8); opacity: 0.8; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0.8); opacity: 0.8; } }</style>
+2776:           </div>
+2777:           <div style="padding: 24px;">
+2778:             <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Breathing Sync</h3>
+2779:             <p style="color: var(--color-text-muted); line-height: 1.6;">Follow the visual guide to slow your breathing, calm your heart rate, and clear your mind.</p>
+2780:           </div>
+2781:         </div>
+2782: 
+2783:         <!-- Zen Bubbles -->
+2784:         <div class="library-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer; border: 1px solid #EAEAEA;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'" onclick="window.location.hash='#/game/bubbles'">
+2785:           <div style="height: 160px; background: linear-gradient(135deg, #FFD3B6, #FFAAA5); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+2786:             <div style="position: absolute; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.4); bottom: 20px; left: 30%; animation: floatUp 4s infinite linear;"></div>
+2787:             <div style="position: absolute; width: 25px; height: 25px; border-radius: 50%; background: rgba(255,255,255,0.3); bottom: 40px; right: 25%; animation: floatUp 3s infinite linear 1s;"></div>
+2788:             <div style="position: absolute; width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.5); bottom: -20px; left: 60%; animation: floatUp 5s infinite linear 2s;"></div>
+2789:             <style>@keyframes floatUp { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-200px); opacity: 0; } }</style>
+2790:           </div>
+2791:           <div style="padding: 24px;">
+2792:             <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Zen Bubbles</h3>
+2793:             <p style="color: var(--color-text-muted); line-height: 1.6;">Gently tap or click drifting bubbles to dissolve them. A mindless activity to drift into relaxation.</p>
+2794:           </div>
+2795:         </div>
+2796:         <!-- Zen Sand -->
+2797:         <div class="library-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer; border: 1px solid #EAEAEA;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'" onclick="window.location.hash='#/game/zensand'">
+2798:           <div style="height: 160px; background: #EEDC9A; display: flex; align-items: center; justify-content: center; position: relative;">
+2799:             <div style="width: 100%; height: 20px; border-bottom: 2px solid rgba(0,0,0,0.05); position: absolute; top: 30px;"></div>
+2800:             <div style="width: 100%; height: 20px; border-bottom: 2px solid rgba(0,0,0,0.05); position: absolute; top: 60px;"></div>
+2801:             <div style="width: 100%; height: 20px; border-bottom: 2px solid rgba(0,0,0,0.05); position: absolute; top: 90px;"></div>
+2802:             <div style="font-size: 3rem; color: #8B7355; opacity: 0.8;">〰️</div>
+2803:           </div>
+2804:           <div style="padding: 24px;">
+2805:             <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Zen Sand</h3>
+2806:             <p style="color: var(--color-text-muted); line-height: 1.6;">A digital Zen Garden. Drag gently across the sand to draw soothing, rhythmic patterns.</p>
+2807:           </div>
+2808:         </div>
+2809: 
+2810:         <!-- Lotus Ripples -->
+2811:         <div class="library-card" style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer; border: 1px solid #EAEAEA;" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'" onclick="window.location.hash='#/game/lotus'">
+2812:           <div style="height: 160px; background: linear-gradient(135deg, #1C2B36, #2C3E50); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+2813:             <div style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); position: absolute; animation: ripple 3s infinite ease-out;"></div>
+2814:             <style>@keyframes ripple { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(3); opacity: 0; } }</style>
+2815:             <div style="font-size: 3rem; text-shadow: 0 0 10px rgba(255,150,150,0.6);">🪷</div>
+2816:           </div>
+2817:           <div style="padding: 24px;">
+2818:             <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Lotus Ripples</h3>
+2819:             <p style="color: var(--color-text-muted); line-height: 1.6;">Tap the tranquil pond surface to create water ripples and bloom ethereal lotus flowers.</p>
+2820:           </div>
+2821:         </div>
+2822:       </div>
+2823:     </div>
+2824:   </section>
+2825: `;
+2826: 
+2827: const GameZenSand = `
+2828:   <style>
+2829:     .game-container-sand {
+2830:       position: relative; height: calc(100vh - 72px); background: #EEDC9A; overflow: hidden;
+2831:     }
+2832:     #sand-canvas {
+2833:       display: block; width: 100%; height: 100%; touch-action: none; cursor: crosshair;
+2834:     }
+2835:     .game-back-sand {
+2836:       position: absolute; top: 20px; left: 20px; text-decoration: none;
+2837:       color: #8B7355; font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;
+2838:       background: rgba(255,255,255,0.4); padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(4px);
+2839:       z-index: 10;
+2840:     }
+2841:     .sand-instruction {
+2842:       position: absolute; top: 20px; right: 20px; z-index: 10;
+2843:       color: #8B7355; font-size: 1.2rem; font-weight: 600; background: rgba(255,255,255,0.4); padding: 8px 16px; border-radius: 20px; pointer-events: none;
+2844:     }
+2845:     #sand-clear-btn {
+2846:       position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10;
+2847:       background: rgba(255,255,255,0.6); border: none; padding: 12px 24px; border-radius: 30px; font-weight: 600; color: #8B7355; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.05); font-size: 1rem;
+2848:     }
+2849:     #sand-clear-btn:hover { background: rgba(255,255,255,0.9); transform: translateX(-50%) translateY(-2px); }
+2850:   </style>
+2851:   <div class="game-container-sand">
+2852:     <a href="#/mindful-games" class="game-back-sand">← Back to Games</a>
+2853:     <div class="sand-instruction">Drag to rake sand</div>
+2854:     <button id="sand-clear-btn">Smooth Sand</button>
+2855:     <canvas id="sand-canvas"></canvas>
+2856:   </div>
+2857: `;
+2858: 
+2859: const GameLotus = `
+2860:   <style>
+2861:     .game-container-lotus {
+2862:       position: relative; height: calc(100vh - 72px); background: #1C2B36; overflow: hidden;
+2863:     }
+2864:     #lotus-canvas {
+2865:       display: block; width: 100%; height: 100%; touch-action: none; cursor: pointer;
+2866:     }
+2867:     .game-back-lotus {
+2868:       position: absolute; top: 20px; left: 20px; text-decoration: none;
+2869:       color: rgba(255,255,255,0.9); font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;
+2870:       background: rgba(0,0,0,0.3); padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(4px);
+2871:       z-index: 10;
+2872:     }
+2873:     .lotus-instruction {
+2874:       position: absolute; top: 20px; right: 20px; z-index: 10;
+2875:       color: rgba(255,255,255,0.8); font-size: 1.2rem; font-weight: 600; pointer-events: none;
+2876:     }
+2877:   </style>
+2878:   <div class="game-container-lotus">
+2879:     <a href="#/mindful-games" class="game-back-lotus">← Back to Games</a>
+2880:     <div class="lotus-instruction">Tap to bloom</div>
+2881:     <canvas id="lotus-canvas"></canvas>
+2882:   </div>
+2883: `;
+2884: 
+2885: const GameBreathing = `
+2886:   <style>
+2887:     .game-container {
+2888:       display: flex; flex-direction: column; align-items: center; justify-content: center;
+2889:       height: calc(100vh - 72px); background: #F4F9F4; overflow: hidden; position: relative;
+2890:     }
+2891:     .breathing-circle-wrapper {
+2892:       position: relative; width: 300px; height: 300px; display: flex; align-items: center; justify-content: center;
+2893:       cursor: pointer; -webkit-tap-highlight-color: transparent;
+2894:     }
+2895:     .breathing-ring {
+2896:       position: absolute; width: 100%; height: 100%; border-radius: 50%;
+2897:       border: 2px dashed #A8E6CF; opacity: 0.5; pointer-events: none;
+2898:     }
+2899:     .breathing-circle {
+2900:       width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #A8E6CF, #34A853);
+2901:       box-shadow: 0 10px 40px rgba(52, 168, 83, 0.3);
+2902:       transition: all 4s cubic-bezier(0.4, 0, 0.2, 1);
+2903:       display: flex; align-items: center; justify-content: center;
+2904:       color: white; font-weight: 600; font-size: 1.2rem; user-select: none;
+2905:     }
+2906:     .expanding {
+2907:       width: 280px; height: 280px;
+2908:     }
+2909:     .instructions {
+2910:       margin-top: 40px; text-align: center; color: #555;
+2911:       font-size: 1.2rem; transition: opacity 0.5s;
+2912:     }
+2913:     .game-back {
+2914:       position: absolute; top: 20px; left: 20px; text-decoration: none;
+2915:       color: #0B3C72; font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;
+2916:     }
+2917:     .game-score-display {
+2918:       position: absolute; top: 20px; right: 20px; background: white; padding: 10px 20px;
+2919:       border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); font-weight: bold; color: #34A853;
+2920:     }
+2921:   </style>
+2922:   <div class="game-container">
+2923:     <a href="#/mindful-games" class="game-back">← Back to Games</a>
+2924:     <div class="game-score-display">Mindful Breaths: <span id="breath-count">0</span></div>
+2925:     
+2926:     <div style="margin-bottom: 40px; text-align: center;">
+2927:       <h2 style="font-size: 2rem; color: #2C5E43; margin-bottom: 8px;">Breathing Sync</h2>
+2928:       <p style="color: #666; max-width: 400px; margin: 0 auto;">Hold to inhale, release to exhale.</p>
+2929:     </div>
+2930: 
+2931:     <div class="breathing-circle-wrapper" id="breathing-area">
+2932:       <div class="breathing-ring"></div>
+2933:       <div class="breathing-circle" id="breathing-circle">Hold</div>
+2934:     </div>
+2935: 
+2936:     <div class="instructions" id="breathing-instruction">Click and hold to inhale</div>
+2937:   </div>
+2938: `;
+2939: 
+2940: const GameBubbles = `
+2941:   <style>
+2942:     .game-container-bubbles {
+2943:       position: relative; height: calc(100vh - 72px); background: linear-gradient(180deg, #E0C3FC 0%, #8EC5FC 100%);
+2944:       overflow: hidden;
+2945:     }
+2946:     #bubbles-canvas {
+2947:       display: block; width: 100%; height: 100%; touch-action: none; cursor: crosshair;
+2948:     }
+2949:     .game-back-bubbles {
+2950:       position: absolute; top: 20px; left: 20px; text-decoration: none;
+2951:       color: white; font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;
+2952:       background: rgba(0,0,0,0.2); padding: 8px 16px; border-radius: 20px; backdrop-filter: blur(4px);
+2953:       z-index: 10;
+2954:     }
+2955:     .score-overlay {
+2956:       position: absolute; top: 20px; right: 20px; z-index: 10;
+2957:       color: white; font-size: 1.2rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+2958:     }
+2959:   </style>
+2960:   <div class="game-container-bubbles">
+2961:     <a href="#/mindful-games" class="game-back-bubbles">← Back to Games</a>
+2962:     <div class="score-overlay">Bubbles Relieved: <span id="bubble-score">0</span></div>
+2963:     <canvas id="bubbles-canvas"></canvas>
+2964:   </div>
+2965: `;
+2966: 
+2967: function initBreathingGame() {
+2968:   const area = document.getElementById('breathing-area');
+2969:   const circle = document.getElementById('breathing-circle');
+2970:   const instruction = document.getElementById('breathing-instruction');
+2971:   const scoreSpan = document.getElementById('breath-count');
+2972:   if (!area || !circle) return;
+2973: 
+2974:   let isBreathingIn = false;
+2975:   let breaths = 0;
+2976:   let holdTimeout;
+2977: 
+2978:   const startInhale = (e) => {
+2979:     if(e.type !== 'touchstart' && e.button !== 0) return; // Only left click or touch
+2980:     isBreathingIn = true;
+2981:     circle.classList.add('expanding');
+2982:     circle.textContent = 'Inhale';
+2983:     instruction.textContent = 'Keep holding...';
+2984:     instruction.style.opacity = '1';
+2985:     
+2986:     // Suggest hold
+2987:     holdTimeout = setTimeout(() => {
+2988:       if(isBreathingIn) {
+2989:         circle.textContent = 'Release';
+2990:         instruction.textContent = 'Now gently release';
+2991:         instruction.style.color = '#34A853';
+2992:       }
+2993:     }, 4000);
+2994:   };
+2995: 
+2996:   const startExhale = () => {
+2997:     if(!isBreathingIn) return;
+2998:     clearTimeout(holdTimeout);
+2999:     isBreathingIn = false;
+3000:     circle.classList.remove('expanding');
+3001:     circle.textContent = 'Exhale';
+3002:     instruction.textContent = 'Click and hold to inhale again';
+3003:     instruction.style.color = '#555';
+3004:     breaths++;
+3005:     scoreSpan.textContent = breaths;
+3006:     setTimeout(() => {
+3007:         if(!isBreathingIn) circle.textContent = 'Hold';
+3008:     }, 4000); // Reset text after exhale duration
+3009:   };
+3010: 
+3011:   area.addEventListener('mousedown', startInhale);
+3012:   window.addEventListener('mouseup', startExhale);
+3013:   area.addEventListener('touchstart', (e) => { e.preventDefault(); startInhale(e); });
+3014:   window.addEventListener('touchend', startExhale);
+3015:   
+3016:   // Cleanup on hash change
+3017:   const cleanup = () => {
+3018:     window.removeEventListener('mouseup', startExhale);
+3019:     window.removeEventListener('touchend', startExhale);
+3020:     window.removeEventListener('hashchange', cleanup);
+3021:   };
+3022:   window.addEventListener('hashchange', cleanup);
+3023: }
+3024: 
+3025: function initBubblesGame() {
+3026:   const canvas = document.getElementById('bubbles-canvas');
+3027:   const scoreSpan = document.getElementById('bubble-score');
+3028:   if (!canvas) return;
+3029: 
+3030:   const ctx = canvas.getContext('2d');
+3031:   let width, height;
+3032:   let bubbles = [];
+3033:   let score = 0;
+3034:   let animationRef;
+3035: 
+3036:   const resize = () => {
+3037:     width = canvas.parentElement.clientWidth;
+3038:     height = canvas.parentElement.clientHeight;
+3039:     canvas.width = width;
+3040:     canvas.height = height;
+3041:   };
+3042:   window.addEventListener('resize', resize);
+3043:   resize();
+3044: 
+3045:   class Bubble {
+3046:     constructor() {
+3047:       this.r = Math.random() * 30 + 15;
+3048:       this.x = Math.random() * (width - this.r * 2) + this.r;
+3049:       this.y = height + this.r;
+3050:       this.speedY = Math.random() * 1.5 + 0.5;
+3051:       this.speedX = (Math.random() - 0.5) * 0.5;
+3052:       this.alpha = Math.random() * 0.4 + 0.2;
+3053:       this.hue = Math.random() * 60 + 200; // Blue to purple range
+3054:       this.popped = false;
+3055:       this.popRadius = this.r;
+3056:       this.popAlpha = 1;
+3057:     }
+3058: 
+3059:     update() {
+3060:       if (this.popped) {
+3061:         this.popRadius += 2;
+3062:         this.popAlpha -= 0.05;
+3063:       } else {
+3064:         this.y -= this.speedY;
+3065:         this.x += this.speedX;
+3066:         // Float logic
+3067:         if(Math.random() > 0.95) this.speedX += (Math.random() - 0.5) * 0.2;
+3068:         
+3069:         // Reset if off top
+3070:         if (this.y + this.r < 0) {
+3071:            this.y = height + this.r;
+3072:            this.x = Math.random() * width;
+3073:         }
+3074:       }
+3075:     }
+3076: 
+3077:     draw(ctx) {
+3078:       if (this.popped) {
+3079:         if(this.popAlpha > 0) {
+3080:             ctx.beginPath();
+3081:             ctx.arc(this.x, this.y, this.popRadius, 0, Math.PI * 2);
+3082:             ctx.strokeStyle = `hsla(${this.hue}, 100%, 80%, ${this.popAlpha})`;
+3083:             ctx.lineWidth = 2;
+3084:             ctx.stroke();
+3085:         }
+3086:       } else {
+3087:         ctx.beginPath();
+3088:         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+3089:         ctx.fillStyle = `hsla(${this.hue}, 100%, 85%, ${this.alpha})`;
+3090:         ctx.fill();
+3091:         ctx.strokeStyle = `hsla(${this.hue}, 100%, 75%, ${this.alpha + 0.2})`;
+3092:         ctx.lineWidth = 1;
+3093:         ctx.stroke();
+3094:         
+3095:         // Highlight
+3096:         ctx.beginPath();
+3097:         ctx.arc(this.x - this.r * 0.3, this.y - this.r * 0.3, this.r * 0.2, 0, Math.PI * 2);
+3098:         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+3099:         ctx.fill();
+3100:       }
+3101:     }
+3102:   }
+3103: 
+3104:   // Create initial bubbles
+3105:   for(let i = 0; i < 20; i++) {
+3106:     const b = new Bubble();
+3107:     b.y = Math.random() * height; // scatter vertically initially
+3108:     bubbles.push(b);
+3109:   }
+3110: 
+3111:   const loop = () => {
+3112:     ctx.clearRect(0, 0, width, height);
+3113:     
+3114:     for(let i = bubbles.length - 1; i >= 0; i--) {
+3115:       const b = bubbles[i];
+3116:       b.update();
+3117:       b.draw(ctx);
+3118:       if(b.popped && b.popAlpha <= 0) {
+3119:         bubbles.splice(i, 1);
+3120:         bubbles.push(new Bubble()); // Replenish
+3121:       }
+3122:     }
+3123:     
+3124:     animationRef = requestAnimationFrame(loop);
+3125:   };
+3126:   loop();
+3127: 
+3128:   const handleInteraction = (ex, ey) => {
+3129:      for(let i = bubbles.length - 1; i >= 0; i--) {
+3130:          const b = bubbles[i];
+3131:          if(!b.popped) {
+3132:              const dist = Math.hypot(b.x - ex, b.y - ey);
+3133:              if(dist < b.r + 10) { // generous hitbox
+3134:                  b.popped = true;
+3135:                  score++;
+3136:                  scoreSpan.textContent = score;
+3137:                  // pop sound simulation via visual only
+3138:              }
+3139:          }
+3140:      }
+3141:   };
+3142: 
+3143:   const onDown = (e) => handleInteraction(e.offsetX, e.offsetY);
+3144:   canvas.addEventListener('mousedown', onDown);
+3145:   
+3146:   const onTouch = (e) => {
+3147:     e.preventDefault();
+3148:     const rect = canvas.getBoundingClientRect();
+3149:     Array.from(e.changedTouches).forEach(touch => {
+3150:        handleInteraction(touch.clientX - rect.left, touch.clientY - rect.top);
+3151:     });
+3152:   };
+3153:   canvas.addEventListener('touchstart', onTouch);
+3154: 
+3155:   const cleanup = () => {
+3156:      window.removeEventListener('resize', resize);
+3157:      cancelAnimationFrame(animationRef);
+3158:      canvas.removeEventListener('mousedown', onDown);
+3159:      canvas.removeEventListener('touchstart', onTouch);
+3160:      window.removeEventListener('hashchange', cleanup);
+3161:   };
+3162:   window.addEventListener('hashchange', cleanup);
+3163: }
+3164: 
+3165: function initZenSand() {
+3166:   const canvas = document.getElementById('sand-canvas');
+3167:   if (!canvas) return;
+3168:   const ctx = canvas.getContext('2d', { willReadFrequently: true });
+3169:   let width, height;
+3170:   let isDrawing = false;
+3171:   let lastX = 0;
+3172:   let lastY = 0;
+3173: 
+3174:   const resize = () => {
+3175:     width = canvas.parentElement.clientWidth;
+3176:     height = canvas.parentElement.clientHeight;
+3177:     canvas.width = width;
+3178:     canvas.height = height;
+3179:     ctx.lineJoin = 'round';
+3180:     ctx.lineCap = 'round';
+3181:     ctx.lineWidth = 15;
+3182:   };
+3183:   window.addEventListener('resize', resize);
+3184:   resize();
+3185: 
+3186:   const drawSandLine = (x, y) => {
+3187:     ctx.globalCompositeOperation = 'source-over';
+3188:     
+3189:     // Draw thick dark line for depth
+3190:     ctx.strokeStyle = 'rgba(180, 150, 100, 0.4)';
+3191:     ctx.lineWidth = 16;
+3192:     ctx.beginPath();
+3193:     ctx.moveTo(lastX, lastY);
+3194:     ctx.lineTo(x, y);
+3195:     ctx.stroke();
+3196: 
+3197:     // Draw bright highlight for ridge
+3198:     ctx.strokeStyle = 'rgba(255, 250, 220, 0.5)';
+3199:     ctx.lineWidth = 8;
+3200:     ctx.beginPath();
+3201:     ctx.moveTo(lastX - 2, lastY - 2);
+3202:     ctx.lineTo(x - 2, y - 2);
+3203:     ctx.stroke();
+3204: 
+3205:     lastX = x;
+3206:     lastY = y;
+3207:   };
+3208: 
+3209:   const fadeEffect = () => {
+3210:     ctx.globalCompositeOperation = 'source-over';
+3211:     ctx.fillStyle = 'rgba(238, 220, 154, 0.015)'; // Very slow fade to base color
+3212:     ctx.fillRect(0, 0, width, height);
+3213:     if(canvas.isConnected) {
+3214:       requestAnimationFrame(fadeEffect);
+3215:     }
+3216:   };
+3217:   fadeEffect(); // start fading loop
+3218: 
+3219:   const getPos = (e) => {
+3220:     const rect = canvas.getBoundingClientRect();
+3221:     if(e.touches && e.touches.length > 0) {
+3222:       return { x: e.touches[0].clientX - rect.left, y: e.touches[0].clientY - rect.top };
+3223:     }
+3224:     return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+3225:   };
+3226: 
+3227:   const startDraw = (e) => {
+3228:     e.preventDefault();
+3229:     isDrawing = true;
+3230:     const pos = getPos(e);
+3231:     lastX = pos.x;
+3232:     lastY = pos.y;
+3233:   };
+3234: 
+3235:   const moveDraw = (e) => {
+3236:     if(!isDrawing) return;
+3237:     e.preventDefault();
+3238:     const pos = getPos(e);
+3239:     // distance check to prevent too many points
+3240:     if(Math.hypot(pos.x - lastX, pos.y - lastY) > 2) {
+3241:        drawSandLine(pos.x, pos.y);
+3242:     }
+3243:   };
+3244: 
+3245:   const endDraw = () => isDrawing = false;
+3246: 
+3247:   canvas.addEventListener('mousedown', startDraw);
+3248:   canvas.addEventListener('mousemove', moveDraw);
+3249:   window.addEventListener('mouseup', endDraw);
+3250:   
+3251:   canvas.addEventListener('touchstart', startDraw, {passive: false});
+3252:   canvas.addEventListener('touchmove', moveDraw, {passive: false});
+3253:   window.addEventListener('touchend', endDraw);
+3254: 
+3255:   const clearBtn = document.getElementById('sand-clear-btn');
+3256:   if (clearBtn) {
+3257:     clearBtn.addEventListener('click', () => {
+3258:       ctx.globalCompositeOperation = 'source-over';
+3259:       ctx.fillStyle = '#EEDC9A'; // immediate clear
+3260:       ctx.fillRect(0, 0, width, height);
+3261:     });
+3262:   }
+3263: 
+3264:   const cleanup = () => {
+3265:     window.removeEventListener('resize', resize);
+3266:     window.removeEventListener('mouseup', endDraw);
+3267:     window.removeEventListener('touchend', endDraw);
+3268:     window.removeEventListener('hashchange', cleanup);
+3269:   };
+3270:   window.addEventListener('hashchange', cleanup);
+3271: }
+3272: 
+3273: function initLotusPond() {
+3274:   const canvas = document.getElementById('lotus-canvas');
+3275:   if (!canvas) return;
+3276:   const ctx = canvas.getContext('2d');
+3277:   let width, height;
+3278:   let entities = [];
+3279:   let animationRef;
+3280: 
+3281:   const resize = () => {
+3282:     width = canvas.parentElement.clientWidth;
+3283:     height = canvas.parentElement.clientHeight;
+3284:     canvas.width = width;
+3285:     canvas.height = height;
+3286:   };
+3287:   window.addEventListener('resize', resize);
+3288:   resize();
+3289: 
+3290:   class Ripple {
+3291:     constructor(x, y) {
+3292:       this.x = x;
+3293:       this.y = y;
+3294:       this.radius = 0;
+3295:       this.maxRadius = Math.random() * 50 + 100;
+3296:       this.opacity = 1;
+3297:       this.speed = Math.random() * 0.5 + 0.5;
+3298:     }
+3299:     update() {
+3300:       this.radius += this.speed;
+3301:       this.opacity = 1 - (this.radius / this.maxRadius);
+3302:     }
+3303:     draw(ctx) {
+3304:       if(this.opacity <= 0) return;
+3305:       ctx.beginPath();
+3306:       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+3307:       ctx.strokeStyle = `rgba(150, 200, 255, ${this.opacity * 0.5})`;
+3308:       ctx.lineWidth = 2;
+3309:       ctx.stroke();
+3310:     }
+3311:   }
+3312: 
+3313:   class Lotus {
+3314:     constructor(x, y) {
+3315:       this.x = x;
+3316:       this.y = y;
+3317:       this.scale = 0;
+3318:       this.opacity = 0;
+3319:       this.life = 0;
+3320:       this.maxLife = 300; // 5 seconds at 60fps
+3321:       this.rotation = Math.random() * Math.PI * 2;
+3322:       this.hue = Math.random() * 40 + 320; // pink to magenta
+3323:     }
+3324:     update() {
+3325:       this.life++;
+3326:       if(this.life < 30) {
+3327:         this.scale += 0.03;
+3328:         this.opacity += 0.03;
+3329:       } else if (this.life > this.maxLife - 60) {
+3330:         this.opacity -= 0.02; // fade out
+3331:       }
+3332:     }
+3333:     draw(ctx) {
+3334:       if(this.opacity <= 0) return;
+3335:       ctx.save();
+3336:       ctx.translate(this.x, this.y);
+3337:       ctx.rotate(this.rotation);
+3338:       ctx.scale(this.scale, this.scale);
+3339:       ctx.globalAlpha = this.opacity;
+3340:       
+3341:       // Draw petals
+3342:       ctx.fillStyle = `hsl(${this.hue}, 80%, 70%)`;
+3343:       for(let i=0; i<8; i++) {
+3344:         ctx.rotate(Math.PI / 4);
+3345:         ctx.beginPath();
+3346:         ctx.ellipse(0, 20, 10, 30, 0, 0, Math.PI * 2);
+3347:         ctx.fill();
+3348:         ctx.strokeStyle = `hsl(${this.hue}, 90%, 85%)`;
+3349:         ctx.stroke();
+3350:       }
+3351:       // center
+3352:       ctx.beginPath();
+3353:       ctx.arc(0, 0, 12, 0, Math.PI * 2);
+3354:       ctx.fillStyle = '#FFE066';
+3355:       ctx.fill();
+3356:       
+3357:       ctx.restore();
+3358:     }
+3359:   }
+3360: 
+3361:   const loop = () => {
+3362:     ctx.fillStyle = 'rgba(28, 43, 54, 0.2)'; // trail effect
+3363:     ctx.fillRect(0, 0, width, height);
+3364: 
+3365:     for(let i = entities.length - 1; i >= 0; i--) {
+3366:       const e = entities[i];
+3367:       e.update();
+3368:       e.draw(ctx);
+3369:       if(e.opacity <= 0 || (e.life && e.life >= e.maxLife)) {
+3370:         entities.splice(i, 1);
+3371:       }
+3372:     }
+3373:     animationRef = requestAnimationFrame(loop);
+3374:   };
+3375:   loop();
+3376: 
+3377:   const spawn = (x, y) => {
+3378:     entities.push(new Ripple(x, y));
+3379:     setTimeout(() => entities.push(new Ripple(x, y)), 400); // 2nd ripple
+3380:     entities.push(new Lotus(x, y));
+3381:   };
+3382: 
+3383:   const handleInteraction = (e) => {
+3384:     e.preventDefault();
+3385:     const rect = canvas.getBoundingClientRect();
+3386:     if(e.touches) {
+3387:       Array.from(e.changedTouches).forEach(t => spawn(t.clientX - rect.left, t.clientY - rect.top));
+3388:     } else {
+3389:       spawn(e.clientX - rect.left, e.clientY - rect.top);
+3390:     }
+3391:   };
+3392: 
+3393:   canvas.addEventListener('mousedown', handleInteraction);
+3394:   canvas.addEventListener('touchstart', handleInteraction, {passive: false});
+3395: 
+3396:   const cleanup = () => {
+3397:     window.removeEventListener('resize', resize);
+3398:     canvas.removeEventListener('mousedown', handleInteraction);
+3399:     canvas.removeEventListener('touchstart', handleInteraction);
+3400:     cancelAnimationFrame(animationRef);
+3401:     window.removeEventListener('hashchange', cleanup);
+3402:   };
+3403:   window.addEventListener('hashchange', cleanup);
+3404: }
+3405: 
+3406: // --- Simple Router ---
+3407: const routes = {
+3408:   '/': Home,
+3409:   '/meditation': Meditation,
+3410:   '/sleep': Sleep,
+3411:   '/focus': Focus,
+3412:   '/articles': Articles,
+3413:   '/assessment': Assessment,
+3414:   '/login': LoginSignup('Log in'),
+3415:   '/signup': LoginSignup('Sign up for free'),
+3416:   '/anxiety': Anxiety,
+3417:   '/stress': Stress,
+3418:   '/about': About,
+3419:   '/careers': Careers,
+3420:   '/press': Press,
+3421: 
+3422:   // Exhaustive Options - "What we offer"
+3423:   '/online-therapy': OnlineTherapy,
+3424:   '/mindfulness': Mindfulness,
+3425:   '/coaching': Coaching,
+3426:   '/ebb-ai': EbbAI,
+3427: 
+3428:   // Exhaustive Options - "How we help"
+3429:   '/sleep-better': SleepBetter,
+3430:   '/mental-health': MentalHealth,
+3431:   '/mindful-families': MindfulFamilies,
+3432: 
+3433:   // Exhaustive Options - "Explore our library"
+3434:   '/new-popular': NewPopular,
+3435:   '/guided-courses': GuidedCourses,
+3436:   '/beginning-meditation': BeginningMeditation,
+3437:   '/calming-anxiety': CalmingAnxiety,
+3438:   '/mindful-parenting': MindfulParenting,
+3439:   '/mindfulness-work': MindfulnessWork,
+3440:   '/sleep-music': SleepMusic,
+3441:   '/white-noise': WhiteNoise,
+3442:   '/exercise-3min': Exercise3Min,
+3443:   '/relief-sunday': ReliefSunday,
+3444:   '/relief-social': ReliefSocial,
+3445:   '/relief-flying': ReliefFlying,
+3446:   '/mindful-games': MindfulGames,
+3447:   '/game/breathing': GameBreathing,
+3448:   '/game/bubbles': GameBubbles,
+3449:   '/game/zensand': GameZenSand,
+3450:   '/game/lotus': GameLotus
+3451: };
+3452: 
+3453: const router = () => {
+3454:   // Get hash path, default to '/'
+3455:   let path = window.location.hash.slice(1) || '/';
+3456: 
+3457:   if (path !== '/white-noise' && currentNoiseType) {
+3458:     stopNoisePlayback();
+3459:   }
+3460: 
+3461:   // Clean up nav links
+3462:   document.querySelectorAll('.nav-link').forEach(link => {
+3463:     link.style.color = 'var(--color-text-dark)';
+3464:     link.style.borderBottom = 'none';
+3465:   });
+3466: 
+3467:   // Highlight active link if it exists
+3468:   const activeLinkId = `nav-${path.slice(1)}`;
+3469:   const activeLink = document.getElementById(activeLinkId);
+3470:   if (activeLink) {
+3471:     activeLink.style.color = 'var(--color-primary)';
+3472:   }
+3473: 
+3474:   // Find content, default to home if not found
+3475:   const content = routes[path] || Home;
+3476: 
+3477:   // Inject
+3478:   const mainContent = document.getElementById('main-content');
+3479:   if (mainContent) {
+3480:     mainContent.innerHTML = content;
+3481:     // Scroll to top on navigation
+3482:     window.scrollTo(0, 0);
+3483: 
+3484:     // Initialize Chart.js if on Home route
+3485:     if (path === '/' || path === '') {
+3486:       const ctx = document.getElementById('moodChart');
+3487:       if (ctx) {
+3488:         if (window.moodChartInstance) {
+3489:           window.moodChartInstance.destroy();
+3490:         }
+3491:         window.moodChartInstance = new Chart(ctx, {
+3492:           type: 'line',
+3493:           data: {
+3494:             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+3495:             datasets: [{
+3496:               label: 'Mood Level (higher is better)',
+3497:               data: window.moodData,
+3498:               fill: true,
+3499:               backgroundColor: 'rgba(52, 168, 83, 0.1)',
+3500:               borderColor: '#34A853',
+3501:               borderWidth: 3,
+3502:               tension: 0.4,
+3503:               pointBackgroundColor: '#ffffff',
+3504:               pointBorderColor: '#34A853',
+3505:               pointBorderWidth: 2,
+3506:               pointRadius: 6,
+3507:               pointHoverRadius: 8
+3508:             }]
+3509:           },
+3510:           options: {
+3511:             responsive: true,
+3512:             maintainAspectRatio: false,
+3513:             scales: {
+3514:               y: {
+3515:                 beginAtZero: true,
+3516:                 max: 5,
+3517:                 ticks: {
+3518:                   stepSize: 1,
+3519:                   display: false
+3520:                 },
+3521:                 grid: {
+3522:                   borderDash: [5, 5]
+3523:                 }
+3524:               },
+3525:               x: {
+3526:                 grid: {
+3527:                   display: false
+3528:                 }
+3529:               }
+3530:             },
+3531:             plugins: {
+3532:               legend: {
+3533:                 display: false
+3534:               },
+3535:               tooltip: {
+3536:                 backgroundColor: '#1A1A3A',
+3537:                 titleFont: { family: 'Outfit', size: 14 },
+3538:                 bodyFont: { family: 'Outfit', size: 14 },
+3539:                 padding: 12,
+3540:                 displayColors: false,
+3541:                 callbacks: {
+3542:                   label: function (context) {
+3543:                     const moods = ['Terrible', 'Bad', 'Okay', 'Good', 'Great'];
+3544:                     return 'Mood: ' + moods[context.raw - 1];
+3545:                   }
+3546:                 }
+3547:               }
+3548:             }
+3549:           }
+3550:         });
+3551:         
+3552:         setTimeout(() => {
+3553:            const val = window.moodData[6];
+3554:            let btnIndex = val - 1;
+3555:            const buttons = document.querySelectorAll('.mood-selector .mood-btn');
+3556:            if (buttons[btnIndex]) {
+3557:              window.setMood(val, buttons[btnIndex]);
+3558:            }
+3559:         }, 0);
+3560:       }
+3561:     }
+3562: 
+3563:     // Initialize Auth routes
+3564:     if (path === '/login' || path === '/signup') {
+3565:       window.AuthFlow.mode = path === '/login' ? 'login' : 'signup';
+3566:       window.AuthFlow.step = 1;
+3567:       window.AuthFlow.render();
+3568:     }
+3569: 
+3570:     // Initialize Assessment route
+3571:     if (path === '/assessment') {
+3572:       renderAssessment();
+3573:     }
+3574: 
+3575:     // Initialize Stress tools route
+3576:     if (path === '/stress') {
+3577:       initStressTools();
+3578:     }
+3579: 
+3580:     // Initialize Sleep Music route
+3581:     if (path === '/sleep-music') {
+3582:       initSleepMusic();
+3583:     }
+3584: 
+3585:     // Initialize Wind & Rain route
+3586:     if (path === '/white-noise') {
+3587:       initWindRain();
+3588:     }
+3589: 
+3590:     // Initialize Games
+3591:     if (path === '/game/breathing') {
+3592:       initBreathingGame();
+3593:     }
+3594:     if (path === '/game/bubbles') {
+3595:       initBubblesGame();
+3596:     }
+3597:     if (path === '/game/zensand') {
+3598:       initZenSand();
+3599:     }
+3600:     if (path === '/game/lotus') {
+3601:       initLotusPond();
+3602:     }
+3603: 
+3604:     // Initialize Mindfulness at Work route
+3605:     if (path === '/mindfulness-work') {
+3606:       initMindfulnessWork();
+3607:     }
+3608: 
+3609:     // Initialize Ebb AI Chat
+3610:     if (path === '/ebb-ai') {
+3611:       const input = document.getElementById('ebb-chat-input');
+3612:       const sendBtn = document.getElementById('ebb-chat-send');
+3613:       const messagesContainer = document.getElementById('ebb-chat-messages');
+3614:     }
+3615: 
+3616:     // Initialize Ebb AI Chat
+3617:     if (path === '/ebb-ai') {
+3618:       const input = document.getElementById('ebb-chat-input');
+3619:       const sendBtn = document.getElementById('ebb-chat-send');
+3620:       const messagesContainer = document.getElementById('ebb-chat-messages');
+3621: 
+3622:       let chatHistory = [];
+3623: 
+3624:       const addMessage = (text, isUser) => {
+3625:         const msgDiv = document.createElement('div');
+3626:         msgDiv.className = `message ${isUser ? 'user-message' : 'ai-message'}`;
+3627: 
+3628:         let styleStrStr = "";
+3629:         let timeAlignStr = "";
+3630:         let timeColorStr = "";
+3631: 
+3632:         if (isUser) {
+3633:           styleStrStr = "align-self: flex-end; background: var(--color-primary); color: white; padding: 16px; border-radius: 16px 16px 4px 16px; box-shadow: var(--shadow-sm); max-width: 80%;";
+3634:           timeAlignStr = "text-align: right;";
+3635:           timeColorStr = "#E6F7F0";
+3636:         } else {
+3637:           styleStrStr = "align-self: flex-start; background: white; padding: 16px; border-radius: 16px 16px 16px 4px; box-shadow: var(--shadow-sm); max-width: 80%;";
+3638:           timeAlignStr = "text-align: left;";
+3639:           timeColorStr = "#aaa";
+3640:         }
+3641: 
+3642:         msgDiv.style.cssText = styleStrStr;
+3643:         
+3644:         // Basic escaping and formatting for text
+3645:         const formattedText = text
+3646:           .replace(/&/g, "&amp;")
+3647:           .replace(/</g, "&lt;")
+3648:           .replace(/>/g, "&gt;")
+3649:           .replace(/\n/g, "<br/>");
+3650: 
+3651:         msgDiv.innerHTML = `
+3652:           <div style="margin: 0; line-height: 1.5; font-size: 0.95rem;">${formattedText}</div>
+3653:           <span class="message-time" style="font-size: 0.75rem; color: ${timeColorStr}; margin-top: 8px; display: block; ${timeAlignStr}">Just now</span>
+3654:         `;
+3655: 
+3656:         messagesContainer.appendChild(msgDiv);
+3657:         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+3658:       };
+3659: 
+3660:       const getLocalEbbResponse = (userText) => {
+3661:         const lower = userText.toLowerCase();
+3662: 
+3663:         if (!lower.trim()) {
+3664:           return "Can you share a little more? I'm here to listen.";
+3665:         }
+3666: 
+3667:         if (/(hi|hello|hey|good morning|good evening|greetings)/i.test(userText)) {
+3668:           return "Hey! How are you feeling today?";
+3669:         }
+3670: 
+3671:         if (/(sad|down|depressed|unhappy)/i.test(userText)) {
+3672:           return "I'm sorry you're feeling that way. Do you want to tell me what happened so we can explore it together?";
+3673:         }
+3674: 
+3675:         if (/(anxious|anxiety|nervous|scared)/i.test(userText)) {
+3676:           return "That sounds stressful. Would you like a quick grounding exercise to ease the tension?";
+3677:         }
+3678: 
+3679:         if (/(happy|good|great|fantastic|awesome)/i.test(userText)) {
+3680:           return "That's wonderful to hear! What's one thing that made your day feel good?";
+3681:         }
+3682: 
+3683:         if (userText.endsWith('?')) {
+3684:           return "Great question! Let's unpack that and explore your options together.";
+3685:         }
+3686: 
+3687:         const defaultResponses = [
+3688:           "I hear you. Can you say more about that?",
+3689:           "Thanks for sharing. What would help you most right now?",
+3690:           "That sounds meaningful. What do you notice in your body as you talk about it?"
+3691:         ];
+3692:         return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+3693:       };
+3694: 
+3695:       const getOpenAIResponse = async (userText) => {
+3696:         const openaiKey = localStorage.getItem('OPENAI_API_KEY');
+3697:         if (!openaiKey) {
+3698:           throw new Error('OpenAI API key not found. Save OPENAI_API_KEY in localStorage.');
+3699:         }
+3700: 
+3701:         const response = await fetch('https://api.openai.com/v1/chat/completions', {
+3702:           method: 'POST',
+3703:           headers: {
+3704:             'Content-Type': 'application/json',
+3705:             'Authorization': `Bearer ${openaiKey}`
+3706:           },
+3707:           body: JSON.stringify({
+3708:             model: 'gpt-4o-mini',
+3709:             messages: [
+3710:               { role: 'system', content: 'You are a compassionate mental wellness chatbot named Ebb that provides supportive guidance and practical strategies.' },
+3711:               ...chatHistory,
+3712:               { role: 'user', content: userText }
+3713:             ],
+3714:             temperature: 0.8,
+3715:             max_tokens: 350
+3716:           })
+3717:         });
+3718: 
+3719:         if (!response.ok) {
+3720:           const details = await response.text();
+3721:           throw new Error(`OpenAI request failed: ${response.status} ${details}`);
+3722:         }
+3723: 
+3724:         const data = await response.json();
+3725:         return data.choices?.[0]?.message?.content?.trim() || 'I had trouble generating a complete answer. Can you rephrase?';
+3726:       };
+3727: 
+3728:       const handleSend = async () => {
+3729:         const text = input.value.trim();
+3730:         if (!text) return;
+3731: 
+3732:         addMessage(text, true);
+3733:         chatHistory.push({ role: 'user', content: text });
+3734: 
+3735:         input.value = '';
+3736:         input.disabled = true;
+3737:         sendBtn.disabled = true;
+3738: 
+3739:         // Typing indicator
+3740:         const typingDiv = document.createElement('div');
+3741:         typingDiv.className = 'message ai-message typing-indicator-container';
+3742:         typingDiv.style.cssText = "align-self: flex-start; background: white; padding: 16px; border-radius: 16px 16px 16px 4px; box-shadow: var(--shadow-sm); max-width: 80%;";
+3743:         typingDiv.innerHTML = `
+3744:             <div class="typing-indicator" style="display: flex; gap: 4px; align-items: center; height: 20px;">
+3745:               <span style="width: 6px; height: 6px; background: #ccc; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both;"></span>
+3746:               <span style="width: 6px; height: 6px; background: #ccc; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both; animation-delay: 0.2s;"></span>
+3747:               <span style="width: 6px; height: 6px; background: #ccc; border-radius: 50%; animation: bounce 1.4s infinite ease-in-out both; animation-delay: 0.4s;"></span>
+3748:             </div>
+3749:         `;
+3750:         messagesContainer.appendChild(typingDiv);
+3751:         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+3752: 
+3753:         try {
+3754:           let finalResponse;
+3755:           try {
+3756:             finalResponse = await getOpenAIResponse(text);
+3757:           } catch (openaiError) {
+3758:             console.warn('OpenAI fallback:', openaiError);
+3759:             finalResponse = getLocalEbbResponse(text);
+3760:           }
+3761: 
+3762:           // mimic typing delay for user experience
+3763:           await new Promise(resolve => setTimeout(resolve, 400));
+3764: 
+3765:           typingDiv.remove();
+3766:           addMessage(finalResponse, false);
+3767:           chatHistory.push({ role: 'assistant', content: finalResponse });
+3768: 
+3769:         } catch (error) {
+3770:           console.error('Chat error:', error);
+3771:           typingDiv.remove();
+3772:           addMessage("I'm sorry, something went wrong internally. Please try again.", false);
+3773: 
+3774:         } finally {
+3775:           input.disabled = false;
+3776:           sendBtn.disabled = false;
+3777:           input.focus();
+3778:         }
+3779:       };
+3780: 
+3781:       sendBtn.addEventListener('click', handleSend);
+3782:       input.addEventListener('keypress', (e) => {
+3783:         if (e.key === 'Enter' && !input.disabled) handleSend();
+3784:       });
+3785:     }
+3786: 
+3787:     // Initialize 3-Min Exercise Route
+3788:     if (path === '/exercise-3min') {
+3789:        window.exerciseStep = -1; // -1 because nextExerciseStep adds 1, making the first display 0
+3790:        window.nextExerciseStep(); // Show the very first frame correctly initialized
+3791:     }
+3792:   }
+3793: };
+3794: 
+3795: const stressToolDefinitions = {
+3796:   'daily-de-stress': {
+3797:     title: 'Daily De-stress',
+3798:     description: 'Quick daily reset routines to lower tension and prevent overwhelm.',
+3799:     actions: [
+3800:       'Take a 2-minute walk and breathe gently while observing your surroundings.',
+3801:       'Do 10 slow shoulder circles and stretch your spine 3 times.',
+3802:       'Write down one thing you completed today in a journal.'
+3803:     ]
+3804:   },
+3805:   'unwind': {
+3806:     title: 'Unwind',
+3807:     description: 'Transition tools for work-to-home, or bedtime routines.',
+3808:     actions: [
+3809:       'Turn off screens 30 minutes before you want to relax.',
+3810:       'Play soft music or white noise for 10 minutes.',
+3811:       'Close your eyes and do a body scan from toes to head.'
+3812:     ]
+3813:   },
+3814:   'breathing-break': {
+3815:     title: 'Breathing Break',
+3816:     description: 'A structured breathing practice to calm the nervous system.',
+3817:     actions: [
+3818:       'Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds.',
+3819:       'Repeat for 5 cycles, then notice your heart rate.',
+3820:       'Use a timer or app and keep the breathing smooth.'
+3821:     ]
+3822:   },
+3823:   'mood-journaling': {
+3824:     title: 'Mood Journaling',
+3825:     description: 'Track what triggers stress and what makes you feel better.',
+3826:     actions: [
+3827:       'Write 3 short sentences about your current mood.',
+3828:       'List 2 positives and 2 challenges from the last 24 hours.',
+3829:       'Set one small intention for with how you want to feel next.'
+3830:     ]
+3831:   },
+3832:   'mindful-movement': {
+3833:     title: 'Mindful Movement',
+3834:     description: 'Gentle motion for calming physical tension and increasing presence.',
+3835:     actions: [
+3836:       'Try 5-10 minutes of slow, focused walking.',
+3837:       'Do a simple yoga stretch for neck, shoulders, and back.',
+3838:       'Use an app or timer to keep movement intentional, not rushed.'
+3839:     ]
+3840:   },
+3841:   'sleep-prep': {
+3842:     title: 'Sleep Prep',
+3843:     description: 'Create a reliable wind-down routine for better sleep quality.',
+3844:     actions: [
+3845:       'Set a consistent bedtime and wake time (even weekends).',
+3846:       'Avoid caffeine after 3 PM and blue light 60 minutes pre-bed.',
+3847:       'Do a calming breathing or meditation segment before lying down.'
+3848:     ]
+3849:   }
+3850: };
+3851: 
+3852: const STRESS_TOOL_STORAGE_KEY = 'wellmind-stress-tool-progress';
+3853: 
+3854: function loadStressToolProgress() {
+3855:   try {
+3856:     return JSON.parse(localStorage.getItem(STRESS_TOOL_STORAGE_KEY)) || {};
+3857:   } catch (e) {
+3858:     return {};
+3859:   }
+3860: }
+3861: 
+3862: function saveStressToolProgress(progress) {
+3863:   localStorage.setItem(STRESS_TOOL_STORAGE_KEY, JSON.stringify(progress));
+3864: }
+3865: 
+3866: function initStressTools() {
+3867:   const grid = document.getElementById('stress-tool-grid');
+3868:   const detailPanel = document.getElementById('stress-tool-details');
+3869:   const title = document.getElementById('stress-tool-title');
+3870:   const description = document.getElementById('stress-tool-description');
+3871:   const progressText = document.getElementById('stress-tool-progress');
+3872:   const actionsList = document.getElementById('stress-tool-actions');
+3873:   const clearBtn = document.getElementById('stress-tool-clear');
+3874:   const saveBtn = document.getElementById('stress-tool-save');
+3875:   const emailBtn = document.getElementById('stress-tool-email');
+3876: 
+3877:   if (!grid || !detailPanel || !title || !description || !progressText || !actionsList || !clearBtn || !saveBtn || !emailBtn) return;
+3878: 
+3879:   let toolProgress = loadStressToolProgress();
+3880:   const dashboard = document.getElementById('stress-tool-dashboard');
+3881:   const dashboardText = document.getElementById('stress-tool-dashboard-text');
+3882:   const dashboardList = document.getElementById('stress-tool-dashboard-list');
+3883:   const resetAllBtn = document.getElementById('stress-tool-reset-all');
+3884: 
+3885:   const renderDashboard = () => {
+3886:     if (!dashboard || !dashboardText || !dashboardList || !resetAllBtn) return;
+3887: 
+3888:     const totalActions = Object.values(stressToolDefinitions).reduce((sum, tool) => sum + tool.actions.length, 0);
+3889:     let completedActions = 0;
+3890: 
+3891:     const items = Object.entries(stressToolDefinitions).map(([id, tool]) => {
+3892:       const done = Array.isArray(toolProgress[id]) ? new Set(toolProgress[id]).size : 0;
+3893:       completedActions += Math.min(done, tool.actions.length);
+3894:       return `<li>${tool.title}: ${Math.min(done, tool.actions.length)} / ${tool.actions.length}</li>`;
+3895:     });
+3896: 
+3897:     const percent = totalActions ? Math.round((completedActions / totalActions) * 100) : 0;
+3898: 
+3899:     dashboardText.textContent = `Overall completed ${completedActions} of ${totalActions} items (${percent}%).`;
+3900:     dashboardList.innerHTML = items.join('');
+3901:     dashboard.style.display = 'block';
+3902:   };
+3903: 
+3904:   if (dashboard && dashboardText && dashboardList && resetAllBtn) {
+3905:     resetAllBtn.onclick = () => {
+3906:       toolProgress = {};
+3907:       saveStressToolProgress(toolProgress);
+3908:       renderDashboard();
+3909:       alert('All tool progress has been reset.');
+3910:     };
+3911:   }
+3912: 
+3913:   const showTool = (id) => {
+3914:     const tool = stressToolDefinitions[id];
+3915:     if (!tool) return;
+3916: 
+3917:     const completedActions = new Set(toolProgress[id] || []);
+3918: 
+3919:     title.textContent = tool.title;
+3920:     description.textContent = tool.description;
+3921:     progressText.textContent = `Completed: ${completedActions.size} of ${tool.actions.length}`;
+3922: 
+3923:     const isDaily = id === 'daily-de-stress';
+3924:     actionsList.innerHTML = tool.actions.map((action, idx) => {
+3925:       const checked = completedActions.has(idx);
+3926:       return `<li style="margin-bottom: 10px;"><label style="display:flex; align-items:center; gap: 8px;"><input type="checkbox" data-index="${idx}" ${checked ? 'checked' : ''}>${action}</label></li>`;
+3927:     }).join('');
+3928: 
+3929:     if (isDaily) {
+3930:       actionsList.insertAdjacentHTML('beforeend', `
+3931:         <li style="margin-top:16px; border-top:1px dashed #ccc; padding-top: 14px;">
+3932:           <div style="display:flex; align-items:center; justify-content:space-between; gap: 12px;">
+3933:             <span style="font-weight:bold;">2-Minute Reset Session</span>
+3934:             <span id="daily-reset-timer-status" style="font-weight:600;color:#3F51B5;">Ready</span>
+3935:           </div>
+3936:           <p style="margin:8px 0 10px; color:#555;">Follow along with a short breathing and movement sequence.</p>
+3937:           <button id="daily-reset-start" class="btn btn-primary" style="margin-right:8px;">Start Reset</button>
+3938:           <button id="daily-reset-stop" class="btn btn-outline" disabled>Stop</button>
+3939:         </li>
+3940:       `);
+3941:     }
+3942: 
+3943:     detailPanel.style.display = 'block';
+3944: 
+3945:     grid.querySelectorAll('.library-card').forEach((card) => {
+3946:       card.style.border = card.dataset.tool === id ? '2px solid var(--color-primary)' : '1px solid #EAEAEA';
+3947:       card.style.transform = card.dataset.tool === id ? 'scale(1.02)' : 'scale(1)';
+3948:     });
+3949: 
+3950:     const checkboxHandlers = () => {
+3951:       const checkedSet = new Set();
+3952:       actionsList.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+3953:         const idx = Number(checkbox.dataset.index);
+3954:         if (checkbox.checked) checkedSet.add(idx);
+3955:         checkbox.addEventListener('change', () => {
+3956:           if (checkbox.checked) checkedSet.add(idx);
+3957:           else checkedSet.delete(idx);
+3958:           toolProgress[id] = Array.from(checkedSet);
+3959:           saveStressToolProgress(toolProgress);
+3960:           progressText.textContent = `Completed: ${checkedSet.size} of ${tool.actions.length}`;
+3961:         });
+3962:       });
+3963:       return checkedSet;
+3964:     };
+3965: 
+3966:     const checkedSet = checkboxHandlers();
+3967: 
+3968:     if (isDaily) {
+3969:       const startBtn = document.getElementById('daily-reset-start');
+3970:       const stopBtn = document.getElementById('daily-reset-stop');
+3971:       const statusSpan = document.getElementById('daily-reset-timer-status');
+3972:       let timerId = null;
+3973:       let remaining = 120;
+3974: 
+3975:       const formatTime = (s) => `${Math.floor(s/60)}:${String(s%60).padStart(2, '0')}`;
+3976: 
+3977:       const updateTimerStatus = () => {
+3978:         if (statusSpan) statusSpan.textContent = `Time left: ${formatTime(remaining)}`;
+3979:       };
+3980: 
+3981:       const endSession = () => {
+3982:         clearInterval(timerId);
+3983:         timerId = null;
+3984:         if (statusSpan) statusSpan.textContent = 'Complete!';
+3985:         stopBtn.disabled = true;
+3986:         startBtn.disabled = false;
+3987:         checkedSet.add(tool.actions.length - 1); // mark last item as complete (optional)
+3988:         toolProgress[id] = Array.from(checkedSet);
+3989:         saveStressToolProgress(toolProgress);
+3990:         renderDashboard();
+3991:       };
+3992: 
+3993:       startBtn.addEventListener('click', () => {
+3994:         if (timerId) return;
+3995:         remaining = 120;
+3996:         updateTimerStatus();
+3997:         startBtn.disabled = true;
+3998:         stopBtn.disabled = false;
+3999: 
+4000:         timerId = setInterval(() => {
+4001:           remaining -= 1;
+4002:           updateTimerStatus();
+4003:           if (remaining <= 0) {
+4004:             endSession();
+4005:           }
+4006:         }, 1000);
+4007:       });
+4008: 
+4009:       stopBtn.addEventListener('click', () => {
+4010:         if (timerId) {
+4011:           clearInterval(timerId);
+4012:           timerId = null;
+4013:           if (statusSpan) statusSpan.textContent = 'Stopped';
+4014:           stopBtn.disabled = true;
+4015:           startBtn.disabled = false;
+4016:         }
+4017:       });
+4018:     }
+4019: 
+4020:     saveBtn.onclick = () => {
+4021:       toolProgress[id] = Array.from(actionsList.querySelectorAll('input[type="checkbox"]'))
+4022:         .filter((checkbox) => checkbox.checked)
+4023:         .map((checkbox) => Number(checkbox.dataset.index));
+4024:       saveStressToolProgress(toolProgress);
+4025:       renderDashboard();
+4026:       alert('Progress saved.');
+4027:     };
+4028: 
+4029:     emailBtn.onclick = () => {
+4030:       const completed = Array.from(actionsList.querySelectorAll('input[type="checkbox"]:checked')).map((checkbox) => tool.actions[Number(checkbox.dataset.index)]);
+4031:       const template = `Hi,\n\nHere is my Well-Mind stress plan for ${tool.title}:\n\n${tool.actions.map((action) => `- ${action}${completed.includes(action) ? ' ✅' : ''}`).join('\n')}\n\nBest,\n[Your Name]`;
+4032:       const mailtoLink = `mailto:?subject=${encodeURIComponent('Well-Mind Stress Plan')}&body=${encodeURIComponent(template)}`;
+4033:       window.location.href = mailtoLink;
+4034:     };
+4035: 
+4036:     renderDashboard();
+4037:   };
+4038: 
+4039:   grid.querySelectorAll('.library-card').forEach((card) => {
+4040:     card.addEventListener('click', () => showTool(card.dataset.tool));
+4041:   });
+4042: 
+4043:   clearBtn.addEventListener('click', () => {
+4044:     detailPanel.style.display = 'none';
+4045:     progressText.textContent = '';
+4046:     actionsList.innerHTML = '';
+4047:     title.textContent = '';
+4048:     description.textContent = '';
+4049:     grid.querySelectorAll('.library-card').forEach((card) => {
+4050:       card.style.border = '1px solid #EAEAEA';
+4051:       card.style.transform = 'scale(1)';
+4052:     });
+4053:   });
+4054: }
+4055: 
+4056: // Listen for hash changes
+4057: window.addEventListener('hashchange', router);
+4058: 
+4059: // Load initial route
+4060: router();
+4061: 
+4062: // Listen for hash changes
+4063: window.addEventListener('hashchange', router);
+4064: 
+4065: // Load initial route
+4066: router();
+4067: 

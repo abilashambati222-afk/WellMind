@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1775200988910ir20k",
+    "fullName": "Jane Smith",
+    "email": "jane@example.com",
+    "password": "$2b$10$q22SrUQmEMFWTdoBrEPmheD/A.xqpoEh3hoZB9gC8f/ajjjUdOK5S",
+    "age": 28,
+    "primaryGoal": "focus",
+    "stressLevel": 5,
+    "createdAt": "2026-04-03T07:23:08.910Z"
+  }
+]
