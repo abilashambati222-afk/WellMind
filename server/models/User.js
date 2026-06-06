@@ -22,6 +22,17 @@ const userSchema = new mongoose.Schema({
   },
   stressLevel: {
     type: Number,
+  },
+  otp: {
+    type: String,
+  },
+  otpExpires: {
+    type: Date,
+  },
+  occupation: {
+    type: String,
+    enum: ['Student', 'Job Holder', 'Old Age', 'Not Specified'],
+    default: 'Not Specified'
   }
 }, { timestamps: true });
 

@@ -1426,7 +1426,7 @@ window.AuthData = {};
 
 window.AuthFlow = {
   mode: 'login', // 'login' or 'signup'
-  step: 1, // 1 (credentials) or 2 (health details)
+  step: 1, // 1 (credentials) or 2 (health details) or 'otp'
   
   toggleMode: (mode) => {
     window.AuthFlow.mode = mode;
@@ -1470,8 +1470,14 @@ window.AuthFlow = {
           const data = await res.json();
           if (!res.ok) throw new Error(data.message || 'Registration failed.');
 
-          localStorage.setItem('wellmind_token', data.token);
-          window.location.hash = '#/onboarding';
+          if (data.requiresOtp) {
+            window.AuthData.email = data.email;
+            window.AuthFlow.step = 'otp';
+            window.AuthFlow.render();
+          } else {
+            localStorage.setItem('wellmind_token', data.token);
+            window.location.hash = '#/onboarding';
+          }
         }
       } else {
         // Login Submission
@@ -1487,9 +1493,48 @@ window.AuthFlow = {
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || 'Login failed.');
 
-        localStorage.setItem('wellmind_token', data.token);
-        window.location.hash = '#/onboarding';
+        if (data.requiresOtp) {
+          window.AuthData.email = data.email;
+          window.AuthFlow.step = 'otp';
+          window.AuthFlow.render();
+        } else {
+          localStorage.setItem('wellmind_token', data.token);
+          window.location.hash = '#/onboarding';
+        }
       }
+    } catch (error) {
+      if (document.getElementById('auth-error')) {
+        document.getElementById('auth-error').innerText = error.message;
+        document.getElementById('auth-error').style.display = 'block';
+      } else {
+        alert(error.message);
+      }
+    }
+  },
+
+  verifyOtp: async (e) => {
+    e.preventDefault();
+    const errorDiv = document.getElementById('auth-error');
+    if (errorDiv) errorDiv.style.display = 'none';
+
+    try {
+      const otp = document.getElementById('authOtpCode').value.trim();
+      const email = window.AuthData.email;
+
+      const res = await fetch('http://localhost:5000/api/auth/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, otp })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || 'OTP verification failed.');
+
+      localStorage.setItem('wellmind_token', data.token);
+      if (data.user) {
+        localStorage.setItem('wellmind_user', JSON.stringify(data.user));
+      }
+      window.location.hash = '#/onboarding';
     } catch (error) {
       if (document.getElementById('auth-error')) {
         document.getElementById('auth-error').innerText = error.message;
@@ -1506,10 +1551,32 @@ window.AuthFlow = {
 
     const isLogin = window.AuthFlow.mode === 'login';
     const isStep1 = window.AuthFlow.step === 1;
+    const isOtp = window.AuthFlow.step === 'otp';
 
     let contentHTML = '';
 
-    if (isLogin) {
+    if (isOtp) {
+      contentHTML = `
+        <h2 style="font-size: 2.2rem; margin-bottom: 8px; color: var(--color-text-dark);">Enter Verification Code</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: 24px;">We've sent a 6-digit OTP code to <strong>${window.AuthData.email}</strong>. Enter it below to access your account.</p>
+        
+        <div style="background: #E8F5E9; color: #2E7D32; padding: 14px; border-radius: 12px; margin-bottom: 24px; font-size: 0.95rem; font-weight: 600; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;">
+          <span>ℹ️</span>
+          <span><strong>Dev Hint:</strong> Since this is a local build, please copy the OTP code printed in your server terminal/console log.</span>
+        </div>
+
+        <div id="auth-error" style="display: none; background: #FFEBEE; color: #D32F2F; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 0.95rem;"></div>
+        
+        <form onsubmit="window.AuthFlow.verifyOtp(event)">
+          <div style="margin-bottom: 32px;">
+            <label style="display: block; margin-bottom: 12px; font-weight: 600; text-align: center; font-size: 1.1rem;">6-Digit OTP Code</label>
+            <input id="authOtpCode" type="text" pattern="\\d{6}" maxlength="6" placeholder="000000" style="width: 100%; padding: 16px; border: 2px solid #EAEAEA; border-radius: 16px; font-family: var(--font-family); font-size: 1.8rem; font-weight: 700; text-align: center; letter-spacing: 8px; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--color-primary)'" onblur="this.style.borderColor='#EAEAEA'" required autocomplete="one-time-code">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; border-radius: 12px; margin-bottom: 16px;">Verify & Continue</button>
+          <button type="button" class="btn btn-outline" style="width: 100%; padding: 14px; font-size: 1.1rem; border-radius: 12px;" onclick="window.AuthFlow.toggleMode('${window.AuthFlow.mode}')">Back to Start</button>
+        </form>
+      `;
+    } else if (isLogin) {
       contentHTML = `
         <h2 style="font-size: 2.2rem; margin-bottom: 8px; color: var(--color-text-dark);">Welcome Back</h2>
         <p style="color: var(--color-text-muted); margin-bottom: 32px;">Take a deep breath and log in to continue your journey.</p>
@@ -2993,28 +3060,44 @@ function renderAssessment() {
     } else {
       const score = assessmentState.answers.reduce((sum, value) => sum + value, 0);
       const interpretation = score <= 6 ? 'Low stress' : score <= 12 ? 'Moderate stress' : 'High stress';
-      const tips = [];
 
-      // Personalized tips based on responses
-      if ([3, 4].includes(assessmentState.answers[0])) {
-        tips.push('Break tasks into smaller steps and take short mental breaks between responsibilities.');
-      }
-      if ([3, 4].includes(assessmentState.answers[1])) {
-        tips.push('Try daily relaxation exercises (deep breathing, body scan, progressive muscle relaxation).');
-      }
-      if ([3, 4].includes(assessmentState.answers[2])) {
-        tips.push('Use grounding techniques such as 5-4-3-2-1 to reduce anxiety in the moment.');
-      }
-      if ([0, 1].includes(assessmentState.answers[3])) {
-        tips.push('Practice patience techniques and set boundaries to avoid irritability spikes.');
-      }
-      if ([3, 4].includes(assessmentState.answers[4])) {
-        tips.push('Improve sleep hygiene: consistent bedtime, screen-free wind-down, and nighttime routine.');
-      }
-
-      if (!tips.length) {
-        tips.push('Great job! Keep maintaining your current wellness habits and check in again regularly.');
-      }
+      // Generate neat and brief suggestions for every single answer
+      const recommendations = [
+        // Question 1: Overwhelmed by responsibilities
+        assessmentState.answers[0] <= 1 
+          ? "<strong>Overwhelming workload</strong>: Your work management is highly effective. Keep prioritizing tasks and taking short breaks to preserve your balance."
+          : assessmentState.answers[0] === 2
+          ? "<strong>Overwhelming workload</strong>: You occasionally feel overloaded. Try to break your projects down into smaller milestones and protect single-tasking periods."
+          : "<strong>Overwhelming workload</strong>: You often feel buried under tasks. Delegate, drop low-priority items, and practice saying 'no' to keep boundaries firm.",
+        
+        // Question 2: Trouble relaxing
+        assessmentState.answers[1] <= 1
+          ? "<strong>Trouble relaxing</strong>: You have excellent wind-down habits. Ensure your evening hours remain protected from work-related thoughts."
+          : assessmentState.answers[1] === 2
+          ? "<strong>Trouble relaxing</strong>: Relaxation is sometimes challenging. Try adding a 5-minute transition ritual, like light stretching or listening to calming sounds."
+          : "<strong>Trouble relaxing</strong>: You rarely find ease. Set a strict digital curfew (no screens 1 hour before bed) and practice progressive muscle relaxation.",
+        
+        // Question 3: Felt nervous, anxious, or on edge
+        assessmentState.answers[2] <= 1
+          ? "<strong>Anxious feelings</strong>: Your nervous system is generally balanced. Keep practicing grounding habits and self-care checkins."
+          : assessmentState.answers[2] === 2
+          ? "<strong>Anxious feelings</strong>: You experience anxiety occasionally. Practice the 4-7-8 breathing technique for two minutes when you feel tension spike."
+          : "<strong>Anxious feelings</strong>: You frequently feel on edge. Try 5-10 minutes of daily mindfulness meditation and use sensory grounding tools to anchor yourself.",
+        
+        // Question 4: Able to control irritability (options order: Always=0, Often=1, Sometimes=2, Rarely=3, Never=4)
+        assessmentState.answers[3] <= 1
+          ? "<strong>Irritability control</strong>: Your self-regulation is strong. Acknowledging frustrations quickly and calmly helps preserve this composure."
+          : assessmentState.answers[3] === 2
+          ? "<strong>Irritability control</strong>: Irritation can sometimes break through. Take a 3-second 'healing pause' before responding to allow your rational mind to engage."
+          : "<strong>Irritability control</strong>: You find it hard to manage frustration. Irritability is often a sign of burnout; schedule micro-rests and communicate boundaries early.",
+        
+        // Question 5: Overwhelming fatigue
+        assessmentState.answers[4] <= 1
+          ? "<strong>Fatigue levels</strong>: Your energy levels are well-managed. Continue shielding your sleep routine and consistent wake-up times."
+          : assessmentState.answers[4] === 2
+          ? "<strong>Fatigue levels</strong>: You experience fatigue periodically. Look closely at screen habits before bed, and schedule short relaxation periods during the day."
+          : "<strong>Fatigue levels</strong>: You suffer from high fatigue. Prioritize deep physical rest, establish a strict bedtime routine, and avoid caffeine late in the day."
+      ];
 
       const relevantGain = interpretation === 'High stress' ? 'Focus on immediate stress reduction practices and weekly review.' : interpretation === 'Moderate stress' ? 'Keep consistent habits and build a small daily routine.' : 'Maintain current habits and take a periodic check-in.';
 
@@ -3029,17 +3112,21 @@ function renderAssessment() {
           <div class="container" style="max-width: 700px; text-align: center;">
             <div style="background: white; padding: 40px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md);">
               <p>Thanks for completing the check-in. Based on your answers, here are your personalized next actions:</p>
-              <h3>03. Quick improvement focus</h3>
-              <p style="margin-top: 0; font-weight: 600;">${relevantGain}</p>
-              <h3>02. Targeted recommendations</h3>
-              <ul style="text-align: left; margin: 10px 0 20px; padding-left: 18px;">
-                ${tips.map((tip) => `<li style="margin-bottom: 8px;">${tip}</li>`).join('')}
+              
+              <h3 style="font-size: 1.4rem; margin-top: 32px; color: var(--color-text-dark); text-align: left; border-bottom: 2px solid #F3E5F5; padding-bottom: 8px;">Quick improvement focus</h3>
+              <p style="margin-top: 12px; font-weight: 600; text-align: left; color: var(--color-text-dark); font-size: 1.05rem;">${relevantGain}</p>
+              
+              <h3 style="font-size: 1.4rem; margin-top: 32px; color: var(--color-text-dark); text-align: left; border-bottom: 2px solid #F3E5F5; padding-bottom: 8px;">Targeted recommendations</h3>
+              <ul style="text-align: left; margin: 16px 0 32px; padding-left: 18px;">
+                ${recommendations.map((rec) => `<li style="margin-bottom: 12px; line-height: 1.5; font-size: 1rem; color: var(--color-text-dark);">${rec}</li>`).join('')}
               </ul>
-              <h3>01. Your response summary</h3>
-              <ul style="text-align:left; margin-top: 10px;">
-                ${assessmentQuestions.map((q, idx) => `<li><strong>${q.prompt}</strong><br/>${q.options[assessmentState.answers[idx]] || 'Not answered'}</li>`).join('')}
+              
+              <h3 style="font-size: 1.4rem; margin-top: 32px; color: var(--color-text-dark); text-align: left; border-bottom: 2px solid #F3E5F5; padding-bottom: 8px;">Your response summary</h3>
+              <ul style="text-align: left; margin-top: 16px; padding-left: 18px;">
+                ${assessmentQuestions.map((q, idx) => `<li style="margin-bottom: 12px; line-height: 1.5; font-size: 1rem; color: var(--color-text-dark);"><strong>${q.prompt}</strong><br/><span style="color: var(--color-text-muted);">${q.options[assessmentState.answers[idx]] || 'Not answered'}</span></li>`).join('')}
               </ul>
-              <button class="btn btn-primary" style="margin-top: 24px;" onclick="window.location.hash='#/'">Back to Home</button>
+              
+              <button class="btn btn-primary" style="margin-top: 32px; width: 100%; padding: 14px; border-radius: 12px; font-size: 1.1rem;" onclick="window.location.hash='#/'">Back to Home</button>
             </div>
           </div>
         </section>
@@ -4268,6 +4355,7 @@ const Onboarding = `
 window.OnboardingFlow = {
   step: 1,
   category: null,
+  occupation: null,
   answers: [],
   questions: {
     sleep: [
@@ -4287,15 +4375,57 @@ window.OnboardingFlow = {
     ]
   },
   
+  selectOccupation: async (occ) => {
+    window.OnboardingFlow.occupation = occ;
+    try {
+      const token = localStorage.getItem('wellmind_token');
+      let email = "";
+      if (window.AuthData && window.AuthData.email) {
+        email = window.AuthData.email;
+      } else {
+        const storedUser = localStorage.getItem('wellmind_user');
+        if (storedUser) {
+          try {
+            const parsed = JSON.parse(storedUser);
+            email = parsed.email;
+          } catch (e) {}
+        }
+      }
+
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
+      await fetch('http://localhost:5000/api/user/occupation', {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify({ email, occupation: occ })
+      });
+
+      const storedUser = localStorage.getItem('wellmind_user');
+      if (storedUser) {
+        try {
+          const parsed = JSON.parse(storedUser);
+          parsed.occupation = occ;
+          localStorage.setItem('wellmind_user', JSON.stringify(parsed));
+        } catch (e) {}
+      }
+    } catch (err) {
+      console.error('Failed to update occupation:', err);
+    }
+    window.OnboardingFlow.step = 2;
+    window.OnboardingFlow.render();
+  },
+  
   selectCategory: (cat) => {
     window.OnboardingFlow.category = cat;
-    window.OnboardingFlow.step = 2;
+    window.OnboardingFlow.step = 3;
     window.OnboardingFlow.render();
   },
 
   selectAnswer: (qIndex, ansIndex) => {
     window.OnboardingFlow.answers[qIndex] = ansIndex;
-    // Highlight selected button
     const buttons = document.querySelectorAll('.answer-btn-' + qIndex);
     buttons.forEach((btn, idx) => {
       if (idx === ansIndex) {
@@ -4313,7 +4443,7 @@ window.OnboardingFlow = {
       alert("Please answer all questions before proceeding.");
       return;
     }
-    window.OnboardingFlow.step = 3;
+    window.OnboardingFlow.step = 4;
     window.OnboardingFlow.render();
   },
 
@@ -4327,7 +4457,35 @@ window.OnboardingFlow = {
 
     if (window.OnboardingFlow.step === 1) {
       container.innerHTML = `
-        <h2 style="font-size: 2rem; margin-bottom: 16px; text-align: center;">Welcome! Let's personalize your experience.</h2>
+        <h2 style="font-size: 2rem; margin-bottom: 16px; text-align: center; color: var(--color-text-dark);">Tell us about yourself</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: 32px; text-align: center; font-size: 1.1rem;">To customize your mental wellness path, which category best describes you?</p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <button class="btn btn-outline onboarding-occ-btn" style="padding: 24px; font-size: 1.25rem; text-align: left; border-radius: 20px; display: flex; align-items: center; gap: 16px; transition: all 0.2s; border: 1px solid #EAEAEA; background: white;" onclick="window.OnboardingFlow.selectOccupation('Student')" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.background='#F8FAFC';" onmouseout="this.style.borderColor='#EAEAEA'; this.style.background='white';">
+            <span style="font-size: 2.2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">🎓</span>
+            <div>
+              <strong style="display: block; color: var(--color-text-dark); margin-bottom: 4px;">Student</strong>
+              <span style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.4;">Manage exam stress, improve focus, and build healthy study habits.</span>
+            </div>
+          </button>
+          <button class="btn btn-outline onboarding-occ-btn" style="padding: 24px; font-size: 1.25rem; text-align: left; border-radius: 20px; display: flex; align-items: center; gap: 16px; transition: all 0.2s; border: 1px solid #EAEAEA; background: white;" onclick="window.OnboardingFlow.selectOccupation('Job Holder')" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.background='#F8FAFC';" onmouseout="this.style.borderColor='#EAEAEA'; this.style.background='white';">
+            <span style="font-size: 2.2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">💼</span>
+            <div>
+              <strong style="display: block; color: var(--color-text-dark); margin-bottom: 4px;">Job Holder / Professional</strong>
+              <span style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.4;">Combat workplace burnout, anxiety, and maintain a healthy work-life balance.</span>
+            </div>
+          </button>
+          <button class="btn btn-outline onboarding-occ-btn" style="padding: 24px; font-size: 1.25rem; text-align: left; border-radius: 20px; display: flex; align-items: center; gap: 16px; transition: all 0.2s; border: 1px solid #EAEAEA; background: white;" onclick="window.OnboardingFlow.selectOccupation('Old Age')" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.background='#F8FAFC';" onmouseout="this.style.borderColor='#EAEAEA'; this.style.background='white';">
+            <span style="font-size: 2.2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">👵</span>
+            <div>
+              <strong style="display: block; color: var(--color-text-dark); margin-bottom: 4px;">Old Age / Senior</strong>
+              <span style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.4;">Focus on peaceful sleep, mental clarity, physical comfort, and relaxation.</span>
+            </div>
+          </button>
+        </div>
+      `;
+    } else if (window.OnboardingFlow.step === 2) {
+      container.innerHTML = `
+        <h2 style="font-size: 2rem; margin-bottom: 16px; text-align: center; color: var(--color-text-dark);">Let's personalize your experience</h2>
         <p style="color: var(--color-text-muted); margin-bottom: 32px; text-align: center; font-size: 1.1rem;">What would you like to focus on first?</p>
         <div style="display: flex; flex-direction: column; gap: 16px;">
           <button class="btn btn-outline" style="padding: 20px; font-size: 1.2rem; text-align: left; border-radius: 16px;" onclick="window.OnboardingFlow.selectCategory('sleep')">💤 Improving my sleep</button>
@@ -4335,13 +4493,13 @@ window.OnboardingFlow = {
           <button class="btn btn-outline" style="padding: 20px; font-size: 1.2rem; text-align: left; border-radius: 16px;" onclick="window.OnboardingFlow.selectCategory('stress')">😌 Reducing stress</button>
         </div>
       `;
-    } else if (window.OnboardingFlow.step === 2) {
+    } else if (window.OnboardingFlow.step === 3) {
       const qList = window.OnboardingFlow.questions[window.OnboardingFlow.category];
       let questionsHTML = '';
       qList.forEach((q, qIndex) => {
         questionsHTML += `
           <div style="margin-bottom: 32px;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 16px;">${qIndex + 1}. ${q.text}</h3>
+            <h3 style="font-size: 1.3rem; margin-bottom: 16px; color: var(--color-text-dark);">${qIndex + 1}. ${q.text}</h3>
             <div style="display: flex; flex-direction: column; gap: 12px;">
               ${q.options.map((opt, oIndex) => `<button class="btn btn-outline answer-btn-${qIndex}" style="text-align: left; padding: 16px; border-radius: 12px; transition: all 0.2s;" onclick="window.OnboardingFlow.selectAnswer(${qIndex}, ${oIndex})">${opt}</button>`).join('')}
             </div>
@@ -4350,11 +4508,11 @@ window.OnboardingFlow = {
       });
 
       container.innerHTML = `
-        <h2 style="font-size: 1.8rem; margin-bottom: 24px; text-align: center;">A few quick questions</h2>
+        <h2 style="font-size: 1.8rem; margin-bottom: 24px; text-align: center; color: var(--color-text-dark);">A few quick questions</h2>
         ${questionsHTML}
         <button class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.2rem; border-radius: 12px;" onclick="window.OnboardingFlow.submitAnswers()">See My Plan</button>
       `;
-    } else if (window.OnboardingFlow.step === 3) {
+    } else if (window.OnboardingFlow.step === 4) {
       let feedback = "";
       let suggestion = "";
       let link = "";
@@ -4362,21 +4520,21 @@ window.OnboardingFlow = {
       if (window.OnboardingFlow.category === 'sleep') {
         feedback = "It looks like your sleep could use some support. Getting quality rest is crucial for your well-being.";
         suggestion = "We recommend starting with our Sleepcasts or relaxing white noise to help you drift off easier.";
-        link = '<a href="#/sleep" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none;">Explore Sleep Library</a>';
+        link = '<a href="#/sleep" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none; color: white;">Explore Sleep Library</a>';
       } else if (window.OnboardingFlow.category === 'anxiety') {
         feedback = "Dealing with anxiety can be exhausting. Recognizing it is the first step toward managing it.";
         suggestion = "Try our 3-minute breathing exercise whenever you feel overwhelmed to help regulate your nervous system.";
-        link = '<a href="#/exercise-3min" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none;">Try Breathing Exercise</a>';
+        link = '<a href="#/exercise-3min" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none; color: white;">Try Breathing Exercise</a>';
       } else {
         feedback = "You're carrying a lot of stress right now. It's important to carve out moments of relief.";
         suggestion = "Our Daily De-stress routines are designed to help you release tension throughout the day.";
-        link = '<a href="#/stress" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none;">View Stress Tools</a>';
+        link = '<a href="#/stress" class="btn btn-primary" style="display: block; margin-bottom: 16px; padding: 16px; border-radius: 12px; text-align: center; text-decoration: none; color: white;">View Stress Tools</a>';
       }
 
       container.innerHTML = `
         <div style="text-align: center; margin-bottom: 32px;">
           <div style="font-size: 4rem; margin-bottom: 16px;">✨</div>
-          <h2 style="font-size: 2rem; margin-bottom: 16px;">Your Personalized Plan</h2>
+          <h2 style="font-size: 2rem; margin-bottom: 16px; color: var(--color-text-dark);">Your Personalized Plan</h2>
           <p style="font-size: 1.1rem; color: var(--color-text-dark); margin-bottom: 16px;">${feedback}</p>
           <p style="color: var(--color-text-muted); margin-bottom: 32px;">${suggestion}</p>
         </div>
@@ -4462,9 +4620,60 @@ const routes = {
   '/game/lotus': GameLotus
 };
 
+window.logoutUser = () => {
+  localStorage.removeItem('wellmind_token');
+  localStorage.removeItem('wellmind_user');
+  window.location.hash = '#/login';
+};
+
+const updateNavbar = () => {
+  const navActions = document.querySelector('.nav-actions');
+  if (!navActions) return;
+
+  const token = localStorage.getItem('wellmind_token');
+  if (token) {
+    navActions.innerHTML = `
+      <button id="request-permissions-btn" class="btn btn-outline btn-small" style="margin-right: 8px;">Allow Permissions</button>
+      <button onclick="window.logoutUser()" class="btn btn-primary btn-small">Log out</button>
+    `;
+  } else {
+    navActions.innerHTML = `
+      <button id="request-permissions-btn" class="btn btn-outline btn-small" style="margin-right: 8px;">Allow Permissions</button>
+      <a href="#/login" class="nav-link login-link">Log in</a>
+      <a href="#/signup" class="btn btn-primary btn-small">Free forever</a>
+    `;
+  }
+};
+
+// Event delegation for Allow Permissions button
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'request-permissions-btn') {
+    if (typeof requestPermissions !== 'undefined') {
+      requestPermissions();
+    }
+  }
+});
+
 const router = () => {
   // Get hash path, default to '/'
   let path = window.location.hash.slice(1) || '/';
+
+  // Auth route protection: if user is not verified, redirect to login
+  const token = localStorage.getItem('wellmind_token');
+  const isAuthRoute = (path === '/login' || path === '/signup');
+  
+  if (!token && !isAuthRoute) {
+    window.location.hash = '#/login';
+    return;
+  }
+
+  if (token && isAuthRoute) {
+    window.location.hash = '#/';
+    return;
+  }
+
+  // Update navbar elements based on logged in status
+  updateNavbar();
 
   if (path !== '/white-noise' && currentNoiseType) {
     stopNoisePlayback();
